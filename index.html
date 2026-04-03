@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polityka Prywatności - Mój Mechanik</title>
+    <title>Mój Mechanik - Twój Osobisty Mechanik AI</title>
+    <meta name="description" content="Zrozum usterkę w kilka sekund. Pobierz aplikację Mój Mechanik, diagnozuj problemy i sprawdzaj auta przed zakupem.">
+    <!-- Tailwind CSS z CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -11,6 +13,7 @@
                 extend: {
                     colors: {
                         darkBg: '#0f172a',
+                        panelBg: '#1e293b',
                         brandRed: '#ef4444',
                         brandRedHover: '#dc2626',
                     }
@@ -18,98 +21,118 @@
             }
         }
     </script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-darkBg text-gray-300 font-sans antialiased leading-relaxed">
+<body class="bg-darkBg text-white font-sans antialiased">
 
-    <div class="max-w-3xl mx-auto px-6 py-12">
-        <!-- Przycisk powrotu -->
-        <a href="index.html" class="inline-flex items-center text-brandRed hover:text-brandRedHover font-semibold mb-10 transition-colors">
-            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-            Powrót do strony głównej
-        </a>
+    <!-- Nawigacja -->
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-black tracking-wider flex items-center gap-2">
+            <i class="fa-solid fa-wrench text-brandRed"></i>
+            MÓJ <span class="text-gray-400">MECHANIK</span>
+        </div>
+        <div>
+            <a href="#features" class="text-sm text-gray-300 hover:text-white mr-6 hidden md:inline-block transition-colors">Funkcje</a>
+            <a href="#" class="bg-brandRed hover:bg-brandRedHover text-white px-5 py-2 rounded-lg font-bold transition-colors shadow-lg shadow-red-500/30">
+                Pobierz aplikację
+            </a>
+        </div>
+    </nav>
 
-        <!-- WERSJA POLSKA -->
-        <section class="mb-16">
-            <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Polityka Prywatności aplikacji "Mój Mechanik"</h1>
-            <p class="mb-8 text-lg">Szanujemy Twoją prywatność. Niniejsza polityka określa zasady przetwarzania danych w aplikacji "Mój Mechanik".</p>
+    <!-- Sekcja Hero -->
+    <header class="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2 flex flex-col items-start text-center md:text-left">
+            <div class="inline-block bg-panelBg text-brandRed font-bold px-3 py-1 rounded-full text-xs tracking-wider mb-6 border border-gray-700">
+                DOSTĘPNE W GOOGLE PLAY
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+                Twój Osobisty <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400">Mechanik AI</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-lg mx-auto md:mx-0">
+                Słyszysz stukanie w kole? Zapaliła się kontrolka? Opisz problem w aplikacji, a sztuczna inteligencja zdiagnozuje usterkę w kilka sekund.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 w-full justify-center md:justify-start">
+                <a href="#" class="bg-brandRed hover:bg-brandRedHover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-red-500/20 flex items-center justify-center gap-3">
+                    <i class="fa-brands fa-google-play text-xl"></i>
+                    Pobierz teraz
+                </a>
+            </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center relative">
+            <div class="absolute inset-0 bg-gradient-to-tr from-brandRed/20 to-transparent blur-3xl rounded-full"></div>
+            <img src="zrzut_gotowy_PL_1_PHONE.jpg" alt="Ekran Główny" class="w-64 md:w-80 rounded-[2rem] border-4 border-gray-800 shadow-2xl relative z-10">
+        </div>
+    </header>
 
-            <div class="space-y-6">
-                <div>
-                    <h2 class="text-xl font-bold text-white mb-2">Gromadzone dane</h2>
-                    <p>Aplikacja nie zbiera danych osobowych (takich jak imię, nazwisko, e-mail). Zbieramy wyłącznie zanonimizowany identyfikator urządzenia (Device ID) w celu przypisania i obsługi zakupionych żetonów diagnoz.</p>
+    <!-- Funkcje -->
+    <section id="features" class="bg-[#0b1120] py-20 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Wszystko, czego potrzebuje Twój samochód</h2>
+                <p class="text-gray-400">Aplikacja stworzona z myślą o kierowcach, którzy chcą mieć pełną kontrolę nad stanem technicznym swojego pojazdu.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-24">
+                <div class="md:w-1/2 order-2 md:order-1 flex justify-center">
+                    <img src="zrzut_gotowy_PL_2_PHONE.jpg" alt="Trafna Diagnoza" class="w-60 md:w-72 rounded-[2rem] border-4 border-gray-800 shadow-xl">
                 </div>
-                
-                <div>
-                    <h2 class="text-xl font-bold text-white mb-2">Przetwarzanie AI</h2>
-                    <p>Treści zapytań o usterki są przesyłane bezpiecznym, szyfrowanym kanałem do usług chmurowych w celu wygenerowania odpowiedzi.</p>
-                </div>
-
-                <div>
-                    <h2 class="text-xl font-bold text-white mb-2">Płatności</h2>
-                    <p>Cały proces płatności za żetony obsługiwany jest natywnie przez Google Play. Nie mamy dostępu do Twoich danych płatniczych.</p>
-                </div>
-
-                <div>
-                    <h2 class="text-xl font-bold text-white mb-2">Usuwanie danych i retencja</h2>
-                    <p>Masz prawo zażądać usunięcia swoich danych (w tym powiązania Device ID z historią żetonów). Aby to zrobić, skontaktuj się z nami na poniższy adres e-mail. Zgłoszenie zostanie przetworzone, a powiązane dane trwale usunięte z naszej infrastruktury w ciągu 14 dni.</p>
-                </div>
-
-                <div>
-                    <h2 class="text-xl font-bold text-white mb-2">Ochrona dzieci</h2>
-                    <p>Aplikacja nie jest skierowana do dzieci poniżej 13 roku życia i świadomie nie gromadzimy żadnych danych od takich osób.</p>
-                </div>
-
-                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700 mt-8">
-                    <h2 class="text-xl font-bold text-white mb-2">Kontakt</h2>
-                    <p>W razie pytań lub żądań usunięcia danych prosimy o kontakt na adres e-mail: <br>
-                    <a href="mailto:delma1212@gmail.com" class="text-brandRed hover:underline font-bold text-lg">delma1212@gmail.com</a></p>
+                <div class="md:w-1/2 order-1 md:order-2">
+                    <div class="w-12 h-12 bg-panelBg rounded-xl flex items-center justify-center mb-6 border border-gray-700">
+                        <i class="fa-solid fa-microchip text-brandRed text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Trafna Diagnoza Usterek</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Zaawansowany moduł AI analizuje objawy i w czytelny sposób tłumaczy, co dolega Twojemu autu. Otrzymasz szczegółowe wyjaśnienia i praktyczne porady, zanim pojedziesz do warsztatu.
+                    </p>
                 </div>
             </div>
-        </section>
 
-        <!-- SEPARATOR -->
-        <hr class="border-gray-800 my-16">
-
-        <!-- WERSJA ANGIELSKA -->
-        <section>
-            <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Privacy Policy for "My Mechanic" App</h1>
-            <p class="mb-8 text-lg">We respect your privacy. This policy outlines the data processing rules within the "My Mechanic" application.</p>
-
-            <div class="space-y-6">
-                <div>
-                    <h2 class="text-xl font-bold text-white mb-2">Data Collected</h2>
-                    <p>The app does not collect personal data (such as name, surname, or email). We only collect an anonymized Device ID to assign and manage purchased diagnostic tokens.</p>
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-24">
+                <div class="md:w-1/2">
+                    <div class="w-12 h-12 bg-panelBg rounded-xl flex items-center justify-center mb-6 border border-gray-700">
+                        <i class="fa-solid fa-list-check text-brandRed text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Gotowe Listy Kontrolne</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Kupujesz auto używane? Wybierasz się w długą trasę? Skorzystaj z profesjonalnie przygotowanych planów przeglądu i porad eksploatacyjnych dopasowanych do Twojego modelu samochodu.
+                    </p>
                 </div>
-                
-                <div>
-                    <h2 class="text-xl font-bold text-white mb-2">AI Processing</h2>
-                    <p>The content of your fault queries is transmitted via a secure, encrypted channel to cloud services to generate responses.</p>
-                </div>
-
-                <div>
-                    <h2 class="text-xl font-bold text-white mb-2">Payments</h2>
-                    <p>The entire payment process for tokens is handled natively by Google Play. We do not have access to your payment information.</p>
-                </div>
-
-                <div>
-                    <h2 class="text-xl font-bold text-white mb-2">Data Deletion and Retention</h2>
-                    <p>You have the right to request the deletion of your data (including the association of your Device ID with your token history). To do so, please contact us at the email address below. Your request will be processed, and the associated data will be permanently deleted from our infrastructure within 14 days.</p>
-                </div>
-
-                <div>
-                    <h2 class="text-xl font-bold text-white mb-2">Children's Privacy</h2>
-                    <p>The app is not directed at children under the age of 13, and we do not knowingly collect any data from such individuals.</p>
-                </div>
-
-                <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700 mt-8">
-                    <h2 class="text-xl font-bold text-white mb-2">Contact</h2>
-                    <p>If you have any questions or data deletion requests, please contact us at: <br>
-                    <a href="mailto:delma1212@gmail.com" class="text-brandRed hover:underline font-bold text-lg">delma1212@gmail.com</a></p>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="zrzut_gotowy_PL_3_PHONE.jpg" alt="Gotowe Listy" class="w-60 md:w-72 rounded-[2rem] border-4 border-gray-800 shadow-xl">
                 </div>
             </div>
-        </section>
 
-    </div>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 order-2 md:order-1 flex justify-center">
+                    <img src="zrzut_gotowy_PL_4_PHONE.jpg" alt="Personalizacja" class="w-60 md:w-72 rounded-[2rem] border-4 border-gray-800 shadow-xl">
+                </div>
+                <div class="md:w-1/2 order-1 md:order-2">
+                    <div class="w-12 h-12 bg-panelBg rounded-xl flex items-center justify-center mb-6 border border-gray-700">
+                        <i class="fa-solid fa-palette text-brandRed text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Pełna Personalizacja</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Dostosuj aplikację do swoich potrzeb. Wybierz język (Polski lub Angielski) oraz ulubiony motyw – jasny, ciemny lub dopasowany automatycznie do ustawień systemu.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Stopka -->
+    <footer class="bg-darkBg py-8 border-t border-gray-800 text-center text-sm text-gray-500">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; 2024 Mój Mechanik. Wszelkie prawa zastrzeżone.</p>
+            <div class="flex gap-6">
+                <a href="polityka.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="mailto:delma1212@gmail.com" class="hover:text-white transition-colors">Kontakt</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
