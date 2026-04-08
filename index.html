@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mój Mechanik - Twój Osobisty Mechanik AI</title>
     <meta name="description" content="Zrozum usterkę w kilka sekund. Pobierz aplikację Mój Mechanik, diagnozuj problemy i sprawdzaj auta przed zakupem.">
-    <!-- Tailwind CSS z CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -21,26 +20,25 @@
             }
         }
     </script>
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-darkBg text-white font-sans antialiased">
 
-    <!-- Nawigacja -->
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
         <div class="text-2xl font-black tracking-wider flex items-center gap-2">
             <i class="fa-solid fa-wrench text-brandRed"></i>
             MÓJ <span class="text-gray-400">MECHANIK</span>
         </div>
-        <div>
-            <a href="#features" class="text-sm text-gray-300 hover:text-white mr-6 hidden md:inline-block transition-colors">Funkcje</a>
-            <a href="https://play.google.com/store/apps/dev?id=7926617532997467963" class="bg-brandRed hover:bg-brandRedHover text-white px-5 py-2 rounded-lg font-bold transition-colors shadow-lg shadow-red-500/30">
-                Pobierz aplikację
+        <div class="flex items-center gap-4">
+            <a href="#features" class="text-sm text-gray-300 hover:text-white hidden md:inline-block transition-colors">Funkcje</a>
+            <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik" class="transition-transform hover:scale-105">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png" 
+                     alt="Pobierz z Google Play" 
+                     class="h-12 md:h-14">
             </a>
         </div>
     </nav>
 
-    <!-- Sekcja Hero -->
     <header class="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center gap-12">
         <div class="md:w-1/2 flex flex-col items-start text-center md:text-left">
             <div class="inline-block bg-panelBg text-brandRed font-bold px-3 py-1 rounded-full text-xs tracking-wider mb-6 border border-gray-700">
@@ -54,7 +52,7 @@
                 Słyszysz stukanie w kole? Zapaliła się kontrolka? Opisz problem w aplikacji, a sztuczna inteligencja zdiagnozuje usterkę w kilka sekund.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 w-full justify-center md:justify-start">
-                <a href="https://play.google.com/store/apps/dev?id=7926617532997467963" class="bg-brandRed hover:bg-brandRedHover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-red-500/20 flex items-center justify-center gap-3">
+                <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik" class="bg-brandRed hover:bg-brandRedHover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-red-500/20 flex items-center justify-center gap-3">
                     <i class="fa-brands fa-google-play text-xl"></i>
                     Pobierz teraz
                 </a>
@@ -62,11 +60,10 @@
         </div>
         <div class="md:w-1/2 flex justify-center relative">
             <div class="absolute inset-0 bg-gradient-to-tr from-brandRed/20 to-transparent blur-3xl rounded-full"></div>
-            <img src="zrzut_gotowy_PL_1_PHONE.jpg" alt="Ekran Główny" class="w-64 md:w-80 rounded-[2rem] border-4 border-gray-800 shadow-2xl relative z-10">
+            <img src="zrzut_gotowy_PL_1_PHONE.jpg" alt="Ekran Główny aplikacji Mój Mechanik" class="w-64 md:w-80 rounded-[2rem] border-4 border-gray-800 shadow-2xl relative z-10">
         </div>
     </header>
 
-    <!-- Funkcje -->
     <section id="features" class="bg-[#0b1120] py-20 border-t border-gray-800">
         <div class="container mx-auto px-6">
             
@@ -77,7 +74,7 @@
 
             <div class="flex flex-col md:flex-row items-center gap-12 mb-24">
                 <div class="md:w-1/2 order-2 md:order-1 flex justify-center">
-                    <img src="zrzut_gotowy_PL_2_PHONE.jpg" alt="Trafna Diagnoza" class="w-60 md:w-72 rounded-[2rem] border-4 border-gray-800 shadow-xl">
+                    <img src="zrzut_gotowy_PL_2_PHONE.jpg" alt="Ekran diagnozy AI" class="w-60 md:w-72 rounded-[2rem] border-4 border-gray-800 shadow-xl">
                 </div>
                 <div class="md:w-1/2 order-1 md:order-2">
                     <div class="w-12 h-12 bg-panelBg rounded-xl flex items-center justify-center mb-6 border border-gray-700">
@@ -101,13 +98,13 @@
                     </p>
                 </div>
                 <div class="md:w-1/2 flex justify-center">
-                    <img src="zrzut_gotowy_PL_3_PHONE.jpg" alt="Gotowe Listy" class="w-60 md:w-72 rounded-[2rem] border-4 border-gray-800 shadow-xl">
+                    <img src="zrzut_gotowy_PL_3_PHONE.jpg" alt="Ekran list kontrolnych" class="w-60 md:w-72 rounded-[2rem] border-4 border-gray-800 shadow-xl">
                 </div>
             </div>
 
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2 order-2 md:order-1 flex justify-center">
-                    <img src="zrzut_gotowy_PL_4_PHONE.jpg" alt="Personalizacja" class="w-60 md:w-72 rounded-[2rem] border-4 border-gray-800 shadow-xl">
+                    <img src="zrzut_gotowy_PL_4_PHONE.jpg" alt="Ekran ustawień i personalizacji" class="w-60 md:w-72 rounded-[2rem] border-4 border-gray-800 shadow-xl">
                 </div>
                 <div class="md:w-1/2 order-1 md:order-2">
                     <div class="w-12 h-12 bg-panelBg rounded-xl flex items-center justify-center mb-6 border border-gray-700">
@@ -123,7 +120,6 @@
         </div>
     </section>
 
-    <!-- Stopka -->
     <footer class="bg-darkBg py-8 border-t border-gray-800 text-center text-sm text-gray-500">
         <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
             <p>&copy; 2026 Mój Mechanik. Wszelkie prawa zastrzeżone.</p>
