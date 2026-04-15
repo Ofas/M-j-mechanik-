@@ -1,1 +1,11 @@
-
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.lukasz.mojmechanik",
+      "sha256_cert_fingerprints":
+        ["67:22:77:CB:1D:15:77:9B:0B:F2:E4:CC:07:ED:16:F0:0B:75:33:B6:53:58:B6:89:CE:AB:05:3D:04:BE:9F:0B"]
+    }
+  }
+]
