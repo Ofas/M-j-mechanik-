@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raport AI PDF – Mój Mechanik</title>
+    <meta name="description" content="Raport AI PDF w aplikacji Mój Mechanik: podsumowanie diagnostyki, opis usterek, wyniki OBD2, VIN i raport do pokazania mechanikowi.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://moj-startup.eu/raport-ai-pdf.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Raport AI PDF – Mój Mechanik">
+    <meta property="og:description" content="Raport AI PDF w aplikacji Mój Mechanik: podsumowanie diagnostyki, opis usterek, wyniki OBD2, VIN i raport do pokazania mechanikowi.">
+    <meta property="og:url" content="https://moj-startup.eu/raport-ai-pdf.html">
+    <meta property="og:locale" content="pl_PL">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: {
+            darkBg: '#0f172a',
+            panelBg: '#1e293b',
+            brandRed: '#ef4444',
+            brandRedHover: '#dc2626'
+        }}}}
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-darkBg text-white font-sans antialiased">
+
+    <nav class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center gap-3">
+        <a href="index.html" class="text-xl md:text-2xl font-black tracking-wider flex items-center gap-2" aria-label="Mój Mechanik - strona główna">
+            <i class="fa-solid fa-wrench text-brandRed"></i>
+            <span class="whitespace-nowrap">MÓJ <span class="text-gray-400">MECHANIK</span></span>
+        </a>
+        <a href="index.html" class="border border-gray-600 hover:border-brandRed text-white px-4 py-2 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2">
+            <i class="fa-solid fa-arrow-left"></i>
+            Powrót do strony głównej
+        </a>
+    </nav>
+
+    <header class="container mx-auto px-6 py-14 md:py-20">
+        <div class="max-w-4xl">
+            <div class="inline-flex items-center gap-2 bg-panelBg text-brandRed font-bold px-3 py-1 rounded-full text-xs tracking-wider mb-6 border border-gray-700">
+                <i class="fa-solid fa-file-pdf"></i>
+                FUNKCJA APLIKACJI MÓJ MECHANIK
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">Raport AI PDF</h1>
+            <p class="text-gray-300 text-lg md:text-xl mb-8 max-w-3xl leading-relaxed">Raport AI PDF w aplikacji Mój Mechanik służy do zapisania najważniejszych informacji z diagnostyki auta w jednym miejscu. Dzięki temu możesz wrócić do wyniku później albo pokazać mechanikowi konkretny opis problemu zamiast tłumaczyć wszystko od początku.</p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL" class="bg-brandRed hover:bg-brandRedHover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-red-500/20 flex items-center justify-center gap-3">
+                    <i class="fa-brands fa-google-play text-xl"></i>
+                    Pobierz z Google Play
+                </a>
+                <a href="index.html" class="border border-gray-600 hover:border-brandRed text-white px-8 py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-3">
+                    Powrót do głównej
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="bg-[#0b1120] py-16 border-t border-gray-800">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <section class="bg-panelBg rounded-3xl p-6 md:p-8 border border-gray-700 shadow-xl mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-5">Co może zawierać raport?</h2>
+                <ul class="space-y-4 text-gray-300 leading-relaxed">
+                    <li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Opis objawów i podejrzeń usterki.</span></li><li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Informacje z diagnostyki OBD2 i błędów DTC.</span></li><li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Dane z dekodera VIN.</span></li><li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Podsumowanie AI, które pomaga uporządkować możliwe przyczyny problemu.</span></li>
+                </ul>
+            </section>
+<section class="bg-panelBg rounded-3xl p-6 md:p-8 border border-gray-700 shadow-xl mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-5">Po co tworzyć raport PDF?</h2>
+                <ul class="space-y-4 text-gray-300 leading-relaxed">
+                    <li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Łatwiej przekazać mechanikowi konkretny opis usterki.</span></li><li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Możesz zachować historię sprawdzenia auta.</span></li><li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Raport pomaga porównać stan pojazdu przed i po naprawie.</span></li><li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Przy zakupie auta używanego raport może być pomocny jako prywatna notatka z oględzin.</span></li>
+                </ul>
+            </section>
+<section class="bg-panelBg rounded-3xl p-6 md:p-8 border border-gray-700 shadow-xl mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-5">Dla kogo jest ta funkcja?</h2>
+                <ul class="space-y-4 text-gray-300 leading-relaxed">
+                    <li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Dla kierowców, którzy chcą mieć porządek w diagnostyce.</span></li><li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Dla osób sprawdzających auto przed zakupem.</span></li><li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Dla użytkowników, którzy korzystają z OBD2 i chcą zapisać wynik.</span></li><li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Dla każdego, kto chce przygotować się do rozmowy z warsztatem.</span></li>
+                </ul>
+            </section>
+
+            <section class="bg-darkBg rounded-3xl p-6 md:p-8 border border-gray-700 mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-5">Tematy powiązane</h2>
+                <div class="flex flex-wrap gap-3"><span class="bg-darkBg border border-gray-700 rounded-full px-4 py-2 text-sm text-gray-300">raport AI PDF</span><span class="bg-darkBg border border-gray-700 rounded-full px-4 py-2 text-sm text-gray-300">diagnostyka PDF</span><span class="bg-darkBg border border-gray-700 rounded-full px-4 py-2 text-sm text-gray-300">raport z auta</span><span class="bg-darkBg border border-gray-700 rounded-full px-4 py-2 text-sm text-gray-300">raport OBD2</span><span class="bg-darkBg border border-gray-700 rounded-full px-4 py-2 text-sm text-gray-300">Mój Mechanik PDF</span></div>
+            </section>
+
+            <section class="bg-panelBg rounded-3xl p-6 md:p-8 border border-gray-700 shadow-xl">
+                <h2 class="text-2xl md:text-3xl font-bold mb-5">Pozostałe funkcje</h2>
+                <div class="grid sm:grid-cols-3 gap-3 text-sm text-gray-300">
+                    <a href="skaner-obd2-live.html" class="bg-panelBg/80 border border-gray-700 rounded-xl p-3 block hover:border-brandRed hover:text-white transition"><i class="fa-solid fa-arrow-right text-brandRed mr-2"></i>Skaner OBD2 live</a><a href="bledy-dtc.html" class="bg-panelBg/80 border border-gray-700 rounded-xl p-3 block hover:border-brandRed hover:text-white transition"><i class="fa-solid fa-arrow-right text-brandRed mr-2"></i>Błędy DTC</a><a href="dekoder-vin.html" class="bg-panelBg/80 border border-gray-700 rounded-xl p-3 block hover:border-brandRed hover:text-white transition"><i class="fa-solid fa-arrow-right text-brandRed mr-2"></i>Dekoder VIN</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section class="bg-darkBg py-16 border-t border-gray-800 text-center">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Sprawdź auto z aplikacją Mój Mechanik</h2>
+            <p class="text-gray-400 text-lg mb-8">Diagnostyka OBD2, błędy DTC, dekoder VIN i raport AI PDF w jednym miejscu.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL" class="inline-flex bg-brandRed hover:bg-brandRedHover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-red-500/20 items-center justify-center gap-3">
+                <i class="fa-brands fa-google-play text-xl"></i>
+                Pobierz aplikację
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-darkBg py-8 border-t border-gray-800 text-center text-sm text-gray-500">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 Mój Mechanik. Wszelkie prawa zastrzeżone.</p>
+            <div class="flex gap-6 flex-wrap justify-center">
+                <a href="index.html" class="hover:text-white transition-colors">Strona główna</a>
+                <a href="polityka.html" class="hover:text-white transition-colors">Polityka Prywatności</a>
+                <a href="mailto:delma1212@gmail.com" class="hover:text-white transition-colors">Kontakt</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

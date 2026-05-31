@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skaner OBD2 live – Mój Mechanik</title>
+    <meta name="description" content="Skaner OBD2 live w aplikacji Mój Mechanik: odczyt parametrów auta na żywo, błędy DTC, kontrolka check engine i diagnostyka samochodu przez adapter OBD2 Bluetooth.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://moj-startup.eu/skaner-obd2-live.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Skaner OBD2 live – Mój Mechanik">
+    <meta property="og:description" content="Skaner OBD2 live w aplikacji Mój Mechanik: odczyt parametrów auta na żywo, błędy DTC, kontrolka check engine i diagnostyka samochodu przez adapter OBD2 Bluetooth.">
+    <meta property="og:url" content="https://moj-startup.eu/skaner-obd2-live.html">
+    <meta property="og:locale" content="pl_PL">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: {
+            darkBg: '#0f172a',
+            panelBg: '#1e293b',
+            brandRed: '#ef4444',
+            brandRedHover: '#dc2626'
+        }}}}
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-darkBg text-white font-sans antialiased">
+
+    <nav class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center gap-3">
+        <a href="index.html" class="text-xl md:text-2xl font-black tracking-wider flex items-center gap-2" aria-label="Mój Mechanik - strona główna">
+            <i class="fa-solid fa-wrench text-brandRed"></i>
+            <span class="whitespace-nowrap">MÓJ <span class="text-gray-400">MECHANIK</span></span>
+        </a>
+        <a href="index.html" class="border border-gray-600 hover:border-brandRed text-white px-4 py-2 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2">
+            <i class="fa-solid fa-arrow-left"></i>
+            Powrót do strony głównej
+        </a>
+    </nav>
+
+    <header class="container mx-auto px-6 py-14 md:py-20">
+        <div class="max-w-4xl">
+            <div class="inline-flex items-center gap-2 bg-panelBg text-brandRed font-bold px-3 py-1 rounded-full text-xs tracking-wider mb-6 border border-gray-700">
+                <i class="fa-solid fa-bluetooth-b"></i>
+                FUNKCJA APLIKACJI MÓJ MECHANIK
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">Skaner OBD2 live</h1>
+            <p class="text-gray-300 text-lg md:text-xl mb-8 max-w-3xl leading-relaxed">Funkcja Skaner OBD2 live w aplikacji Mój Mechanik pomaga sprawdzić podstawowe dane samochodu w czasie rzeczywistym po połączeniu z adapterem OBD2 Bluetooth. To szybki sposób, żeby zobaczyć, co dzieje się z autem przed wizytą w warsztacie.</p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL" class="bg-brandRed hover:bg-brandRedHover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-red-500/20 flex items-center justify-center gap-3">
+                    <i class="fa-brands fa-google-play text-xl"></i>
+                    Pobierz z Google Play
+                </a>
+                <a href="index.html" class="border border-gray-600 hover:border-brandRed text-white px-8 py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-3">
+                    Powrót do głównej
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="bg-[#0b1120] py-16 border-t border-gray-800">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <section class="bg-panelBg rounded-3xl p-6 md:p-8 border border-gray-700 shadow-xl mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-5">Do czego służy skaner OBD2 live?</h2>
+                <ul class="space-y-4 text-gray-300 leading-relaxed">
+                    <li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Odczyt parametrów pracy silnika na żywo.</span></li><li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Pomoc przy kontrolce Check Engine.</span></li><li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Wstępna diagnostyka przed rozmową z mechanikiem.</span></li><li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Lepsze zrozumienie objawów auta: nierówna praca, spadek mocy, przegrzewanie, problemy z obrotami.</span></li>
+                </ul>
+            </section>
+<section class="bg-panelBg rounded-3xl p-6 md:p-8 border border-gray-700 shadow-xl mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-5">Jak działa w aplikacji Mój Mechanik?</h2>
+                <ul class="space-y-4 text-gray-300 leading-relaxed">
+                    <li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Podłączasz adapter OBD2 Bluetooth do gniazda diagnostycznego auta.</span></li><li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Łączysz telefon z adapterem.</span></li><li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Aplikacja pokazuje odczyty live i pomaga powiązać dane z możliwymi objawami usterki.</span></li><li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Wyniki możesz wykorzystać jako punkt startowy do dalszej diagnostyki.</span></li>
+                </ul>
+            </section>
+<section class="bg-panelBg rounded-3xl p-6 md:p-8 border border-gray-700 shadow-xl mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-5">Dla kogo jest ta funkcja?</h2>
+                <ul class="space-y-4 text-gray-300 leading-relaxed">
+                    <li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Dla kierowcy, który chce szybko sprawdzić auto.</span></li><li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Dla osoby kupującej samochód używany.</span></li><li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Dla użytkownika, który chce wiedzieć więcej przed wizytą w serwisie.</span></li><li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Dla osób, które nie chcą zgadywać przy pierwszej kontrolce na desce rozdzielczej.</span></li>
+                </ul>
+            </section>
+
+            <section class="bg-darkBg rounded-3xl p-6 md:p-8 border border-gray-700 mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold mb-5">Tematy powiązane</h2>
+                <div class="flex flex-wrap gap-3"><span class="bg-darkBg border border-gray-700 rounded-full px-4 py-2 text-sm text-gray-300">OBD2 Bluetooth</span><span class="bg-darkBg border border-gray-700 rounded-full px-4 py-2 text-sm text-gray-300">diagnostyka auta</span><span class="bg-darkBg border border-gray-700 rounded-full px-4 py-2 text-sm text-gray-300">check engine</span><span class="bg-darkBg border border-gray-700 rounded-full px-4 py-2 text-sm text-gray-300">parametry live</span><span class="bg-darkBg border border-gray-700 rounded-full px-4 py-2 text-sm text-gray-300">skaner samochodowy</span></div>
+            </section>
+
+            <section class="bg-panelBg rounded-3xl p-6 md:p-8 border border-gray-700 shadow-xl">
+                <h2 class="text-2xl md:text-3xl font-bold mb-5">Pozostałe funkcje</h2>
+                <div class="grid sm:grid-cols-3 gap-3 text-sm text-gray-300">
+                    <a href="bledy-dtc.html" class="bg-panelBg/80 border border-gray-700 rounded-xl p-3 block hover:border-brandRed hover:text-white transition"><i class="fa-solid fa-arrow-right text-brandRed mr-2"></i>Błędy DTC</a><a href="dekoder-vin.html" class="bg-panelBg/80 border border-gray-700 rounded-xl p-3 block hover:border-brandRed hover:text-white transition"><i class="fa-solid fa-arrow-right text-brandRed mr-2"></i>Dekoder VIN</a><a href="raport-ai-pdf.html" class="bg-panelBg/80 border border-gray-700 rounded-xl p-3 block hover:border-brandRed hover:text-white transition"><i class="fa-solid fa-arrow-right text-brandRed mr-2"></i>Raport AI PDF</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section class="bg-darkBg py-16 border-t border-gray-800 text-center">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Sprawdź auto z aplikacją Mój Mechanik</h2>
+            <p class="text-gray-400 text-lg mb-8">Diagnostyka OBD2, błędy DTC, dekoder VIN i raport AI PDF w jednym miejscu.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL" class="inline-flex bg-brandRed hover:bg-brandRedHover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-red-500/20 items-center justify-center gap-3">
+                <i class="fa-brands fa-google-play text-xl"></i>
+                Pobierz aplikację
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-darkBg py-8 border-t border-gray-800 text-center text-sm text-gray-500">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 Mój Mechanik. Wszelkie prawa zastrzeżone.</p>
+            <div class="flex gap-6 flex-wrap justify-center">
+                <a href="index.html" class="hover:text-white transition-colors">Strona główna</a>
+                <a href="polityka.html" class="hover:text-white transition-colors">Polityka Prywatności</a>
+                <a href="mailto:delma1212@gmail.com" class="hover:text-white transition-colors">Kontakt</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

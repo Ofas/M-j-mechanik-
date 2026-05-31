@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mój Mechanik: OBD2, VIN i diagnoza AI</title>
+    <meta name="description" content="Mój Mechanik to aplikacja na Androida do diagnostyki auta: skaner OBD2, odczyt błędów DTC, dekoder VIN, raport AI PDF, przegląd auta i diagnoza usterek przed wizytą w warsztacie.">
+    <meta name="keywords" content="Mój Mechanik, skaner OBD2, diagnostyka samochodu, diagnoza AI auta, dekoder VIN, raport VIN PDF, błędy DTC, check engine, aplikacja dla kierowcy, przegląd auta">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://moj-startup.eu/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mój Mechanik: OBD2, VIN i diagnoza AI">
+    <meta property="og:description" content="Sprawdź auto, odczytaj błędy OBD2, rozkoduj VIN i wygeneruj raport AI PDF w telefonie.">
+    <meta property="og:url" content="https://moj-startup.eu/">
+    <meta property="og:locale" content="pl_PL">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Mój Mechanik",
+      "alternateName": "Mój Mechanik: OBD2, VIN i diagnoza AI",
+      "operatingSystem": "Android",
+      "applicationCategory": "UtilitiesApplication",
+      "description": "Aplikacja dla kierowców: diagnostyka AI, skaner OBD2, odczyt błędów DTC, dekoder VIN i raporty PDF.",
+      "url": "https://moj-startup.eu/",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "PLN"
+      }
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: {
+            darkBg: '#0f172a',
+            panelBg: '#1e293b',
+            brandRed: '#ef4444',
+            brandRedHover: '#dc2626'
+        }}}}
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-darkBg text-white font-sans antialiased">
+
+    <nav class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center gap-3">
+        <a href="index.html" class="text-xl md:text-2xl font-black tracking-wider flex items-center gap-2" aria-label="Mój Mechanik - strona główna">
+            <i class="fa-solid fa-wrench text-brandRed"></i>
+            <span class="whitespace-nowrap">MÓJ <span class="text-gray-400">MECHANIK</span></span>
+        </a>
+        <div class="flex items-center gap-4 shrink-0">
+		    <a href="#features" class="text-sm text-gray-300 hover:text-white hidden md:inline-block transition-colors">Funkcje</a>
+            <a href="#screenshots" class="text-sm text-gray-300 hover:text-white hidden md:inline-block transition-colors">Screeny</a>
+            <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik" class="transition-transform hover:scale-105 block" aria-label="Pobierz Mój Mechanik z Google Play">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png" alt="Pobierz z Google Play" class="h-10 md:h-14 w-auto object-contain">
+            </a>
+        </div>
+    </nav>
+
+    <header class="container mx-auto px-6 py-14 md:py-24 flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2 flex flex-col items-start text-center md:text-left">
+            <div class="inline-flex items-center gap-2 bg-panelBg text-brandRed font-bold px-3 py-1 rounded-full text-xs tracking-wider mb-6 border border-gray-700 mx-auto md:mx-0">
+                <i class="fa-brands fa-google-play"></i>
+                APLIKACJA NA ANDROIDA
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+                OBD2, VIN i <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400">diagnoza AI auta</span>
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl mb-8 max-w-xl mx-auto md:mx-0">
+                Mój Mechanik pomaga kierowcy zrozumieć usterkę, odczytać dane ze skanera OBD2, sprawdzić numer VIN i przygotować raport PDF przed naprawą albo zakupem samochodu.
+            </p>
+            <div class="grid grid-cols-2 gap-3 text-sm text-gray-300 mb-10 w-full max-w-xl">
+
+    <a href="skaner-obd2-live.html" class="bg-panelBg/80 border border-gray-700 rounded-xl p-3 block hover:border-brandRed hover:text-white transition">
+        <i class="fa-solid fa-bluetooth-b text-brandRed mr-2"></i>Skaner OBD2 live
+    </a>
+
+    <a href="bledy-dtc.html" class="bg-panelBg/80 border border-gray-700 rounded-xl p-3 block hover:border-brandRed hover:text-white transition">
+        <i class="fa-solid fa-car-burst text-brandRed mr-2"></i>Błędy DTC
+    </a>
+
+    <a href="dekoder-vin.html" class="bg-panelBg/80 border border-gray-700 rounded-xl p-3 block hover:border-brandRed hover:text-white transition">
+        <i class="fa-solid fa-barcode text-brandRed mr-2"></i>Dekoder VIN
+    </a>
+
+    <a href="raport-ai-pdf.html" class="bg-panelBg/80 border border-gray-700 rounded-xl p-3 block hover:border-brandRed hover:text-white transition">
+        <i class="fa-solid fa-file-pdf text-brandRed mr-2"></i>Raport AI PDF
+    </a>
+
+</div>
+            <div class="flex flex-col sm:flex-row gap-4 w-full justify-center md:justify-start">
+                <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik" class="bg-brandRed hover:bg-brandRedHover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-red-500/20 flex items-center justify-center gap-3">
+                    <i class="fa-brands fa-google-play text-xl"></i>
+                    Pobierz z Google Play
+                </a>
+                <a href="faq-opinie.html" class="border border-gray-600 hover:border-brandRed text-white px-8 py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-3">
+                    faq-opinie
+                </a>
+            </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center relative">
+            <div class="absolute inset-0 bg-gradient-to-tr from-brandRed/30 to-transparent blur-3xl rounded-full"></div>
+            <img src="assets/screen-home.webp" alt="Ekran główny aplikacji Mój Mechanik z funkcjami Diagnoza, Przegląd, Dekoder VIN i Skaner OBD2" class="w-64 md:w-80 rounded-[2rem] border-4 border-gray-800 shadow-2xl relative z-10" loading="eager">
+        </div>
+    </header>
+
+    <section id="features" class="bg-[#0b1120] py-20 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Diagnostyka samochodu w telefonie</h2>
+                <p class="text-gray-400">Jedna aplikacja do szybkiej diagnozy usterek, odczytu danych OBD2, sprawdzania VIN i tworzenia raportów, które możesz pokazać mechanikowi.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-20">
+                <article class="bg-panelBg rounded-3xl p-6 border border-gray-700 shadow-xl">
+                    <div class="w-12 h-12 bg-darkBg rounded-xl flex items-center justify-center mb-5 border border-gray-700"><i class="fa-solid fa-microchip text-brandRed text-xl"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Diagnoza AI usterek</h3>
+                    <p class="text-gray-400 leading-relaxed">Opisz objawy, kontrolki lub zachowanie auta. Aplikacja pomaga wskazać możliwe przyczyny i podpowiada, co sprawdzić przed wizytą w warsztacie.</p>
+                </article>
+                <article class="bg-panelBg rounded-3xl p-6 border border-gray-700 shadow-xl">
+                    <div class="w-12 h-12 bg-darkBg rounded-xl flex items-center justify-center mb-5 border border-gray-700"><i class="fa-brands fa-bluetooth-b text-brandRed text-xl"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Skaner OBD2 live</h3>
+                    <p class="text-gray-400 leading-relaxed">Połącz adapter OBD2 Bluetooth i obserwuj dane na żywo: obroty silnika, temperaturę płynu, prędkość, przepustnicę oraz błędy DTC.</p>
+                </article>
+                <article class="bg-panelBg rounded-3xl p-6 border border-gray-700 shadow-xl">
+                    <div class="w-12 h-12 bg-darkBg rounded-xl flex items-center justify-center mb-5 border border-gray-700"><i class="fa-solid fa-barcode text-brandRed text-xl"></i></div>
+                    <h3 class="text-xl font-bold mb-3">VIN PRO i raport PDF</h3>
+                    <p class="text-gray-400 leading-relaxed">Wpisz numer VIN, sprawdź podstawowe dane pojazdu i wygeneruj raport AI PDF pomocny przy zakupie samochodu używanego.</p>
+                </article>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-24">
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="assets/screen-obd2-live.webp" alt="Skaner OBD2 w aplikacji Mój Mechanik pokazujący dane live, obroty silnika, temperaturę płynu i błędy DTC" class="w-60 md:w-72 rounded-[2rem] border-4 border-gray-800 shadow-xl" loading="lazy">
+                </div>
+                <div class="md:w-1/2">
+                    <div class="w-12 h-12 bg-panelBg rounded-xl flex items-center justify-center mb-6 border border-gray-700"><i class="fa-solid fa-gauge-high text-brandRed text-xl"></i></div>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4">Odczyt OBD2 i błędów DTC</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">Sprawdzaj parametry auta w czasie rzeczywistym i szybciej zrozum, co dzieje się z silnikiem. To praktyczne wsparcie przy kontrolce Check Engine, nierównej pracy silnika i podejrzeniu usterki.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-24">
+                <div class="md:w-1/2 order-1">
+                    <div class="w-12 h-12 bg-panelBg rounded-xl flex items-center justify-center mb-6 border border-gray-700"><i class="fa-solid fa-lock-open text-brandRed text-xl"></i></div>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4">Sprawdzenie VIN przed zakupem auta</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">Dekoder VIN pomaga szybko sprawdzić podstawowe informacje o pojeździe. Funkcja VIN PRO może przygotować rozszerzony raport AI PDF dla auta, które chcesz kupić.</p>
+                </div>
+                <div class="md:w-1/2 order-2 flex justify-center">
+                    <img src="assets/screen-vin-pro.webp" alt="Dekoder VIN i raport VIN PRO AI PDF w aplikacji Mój Mechanik" class="w-60 md:w-72 rounded-[2rem] border-4 border-gray-800 shadow-xl" loading="lazy">
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 order-2 md:order-1 flex justify-center">
+                    <img src="assets/screen-ai-report.webp" alt="Raport z przeglądu i diagnozy AI w aplikacji Mój Mechanik, zapis diagnozy i przeglądu auta" class="w-60 md:w-72 rounded-[2rem] border-4 border-gray-800 shadow-xl" loading="lazy">
+                </div>
+                <div class="md:w-1/2 order-1 md:order-2">
+                    <div class="w-12 h-12 bg-panelBg rounded-xl flex items-center justify-center mb-6 border border-gray-700"><i class="fa-solid fa-file-lines text-brandRed text-xl"></i></div>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4">Raporty z diagnozy i przeglądu</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed">Zapisuj wyniki diagnozy, przeglądu i analizy AI. Dzięki temu łatwiej wrócisz do wcześniejszych ustaleń albo pokażesz mechanikowi konkretny opis problemu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="screenshots" class="bg-darkBg py-20 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Zobacz aplikację Mój Mechanik</h2>
+                <p class="text-gray-400">Screeny pokazują najważniejsze funkcje: diagnozę AI, skaner OBD2, dekoder VIN i raporty przydatne dla kierowcy.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <figure class="bg-panelBg p-4 rounded-3xl border border-gray-700"><img src="assets/screen-home.webp" alt="Menu aplikacji Mój Mechanik: diagnoza, przegląd, dekoder VIN, skaner OBD2" class="rounded-2xl w-full" loading="lazy"><figcaption class="text-sm text-gray-400 mt-3 text-center">Diagnoza, przegląd, VIN i OBD2</figcaption></figure>
+                <figure class="bg-panelBg p-4 rounded-3xl border border-gray-700"><img src="assets/screen-obd2-live.webp" alt="Odczyt OBD2 live i dane silnika w aplikacji" class="rounded-2xl w-full" loading="lazy"><figcaption class="text-sm text-gray-400 mt-3 text-center">Skaner OBD2 live</figcaption></figure>
+                <figure class="bg-panelBg p-4 rounded-3xl border border-gray-700"><img src="assets/screen-vin-pro.webp" alt="Sprawdzanie VIN i raport AI PDF przed kupnem auta" class="rounded-2xl w-full" loading="lazy"><figcaption class="text-sm text-gray-400 mt-3 text-center">VIN PRO i raport AI PDF</figcaption></figure>
+                <figure class="bg-panelBg p-4 rounded-3xl border border-gray-700"><img src="assets/screen-ai-report.webp" alt="Raport z przeglądu i zapis diagnozy AI" class="rounded-2xl w-full" loading="lazy"><figcaption class="text-sm text-gray-400 mt-3 text-center">Raport z diagnozy</figcaption></figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#0b1120] py-20 border-t border-gray-800">
+        <div class="container mx-auto px-6 max-w-5xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Nie zgaduj. Sprawdź auto w telefonie.</h2>
+            <p class="text-gray-400 text-lg mb-10 max-w-3xl mx-auto">Mój Mechanik to wsparcie dla kierowców, którzy chcą szybciej zrozumieć usterkę, przygotować się do rozmowy z mechanikiem i rozsądniej podejść do zakupu samochodu używanego.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik" class="inline-flex bg-brandRed hover:bg-brandRedHover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-red-500/20 items-center justify-center gap-3">
+                <i class="fa-brands fa-google-play text-xl"></i>
+                Pobierz aplikację
+            </a>
+        </div>
+    </section>
+
+    <section id="data-deletion" class="bg-darkBg py-20 border-t border-gray-800">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="bg-panelBg rounded-3xl p-8 md:p-12 border border-gray-700 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 opacity-10"><i class="fa-solid fa-user-slash text-8xl text-brandRed"></i></div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl font-bold mb-6 flex items-center gap-3"><i class="fa-solid fa-shield-halved text-brandRed"></i>Zarządzanie danymi</h2>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div>
+                            <p class="text-gray-300 mb-6 leading-relaxed">Zgodnie z zasadami Google Play, umożliwiamy całkowite usunięcie Twojego konta oraz wszystkich powiązanych z nim danych z naszej bazy Firestore.</p>
+                            <ul class="space-y-4 text-sm text-gray-400">
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i>Usunięcie profilu urządzenia i historii żetonów.</li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i>Wszystkie żetony zostaną utracone.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-darkBg/50 p-6 rounded-2xl border border-gray-700">
+                            <h3 class="text-lg font-semibold mb-4 text-white">Wniosek o usunięcie</h3>
+                            <form action="mailto:delma1212@gmail.com" method="post" enctype="text/plain" class="space-y-4">
+                                <input type="email" name="email" required placeholder="Twój e-mail" class="w-full bg-panelBg border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-brandRed outline-none transition-all">
+                                <input type="text" name="device_id" placeholder="Device ID (opcjonalnie)" class="w-full bg-panelBg border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-brandRed outline-none transition-all">
+                                <button type="submit" class="w-full bg-transparent border border-brandRed text-brandRed hover:bg-brandRed hover:text-white font-bold py-3 rounded-lg transition-all flex items-center justify-center gap-2">Wyślij prośbę</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-darkBg py-8 border-t border-gray-800 text-center text-sm text-gray-500">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 Mój Mechanik. Wszelkie prawa zastrzeżone.</p>
+            <div class="flex gap-6 flex-wrap justify-center">
+                <a href="#data-deletion" class="hover:text-white transition-colors">Usuwanie danych</a>
+                <a href="polityka.html" class="hover:text-white transition-colors">Polityka Prywatności</a>
+                <a href="mailto:delma1212@gmail.com" class="hover:text-white transition-colors">Kontakt</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
