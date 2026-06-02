@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWJFED9NVQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SWJFED9NVQ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELM327 Bluetooth - jak podłączyć adapter OBD2 do telefonu?</title>
+    <meta name="description" content="Poradnik ELM327 Bluetooth: jak działa adapter OBD2, gdzie jest gniazdo diagnostyczne, jak połączyć telefon i co zrobić, gdy skaner nie łączy się z autem.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://moj-startup.eu/elm327-bluetooth/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ELM327 Bluetooth - jak podłączyć adapter OBD2?">
+    <meta property="og:description" content="Sprawdź, jak podłączyć adapter OBD2 Bluetooth i odczytać dane auta w aplikacji Mój Mechanik.">
+    <meta property="og:url" content="https://moj-startup.eu/elm327-bluetooth/">
+    <meta property="og:locale" content="pl_PL">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Co to jest ELM327 Bluetooth?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ELM327 Bluetooth to adapter OBD2, który podłącza się do gniazda diagnostycznego auta. Adapter przekazuje dane ze sterownika pojazdu do telefonu, gdzie aplikacja może pokazać kody DTC i wybrane parametry live."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gdzie znajduje się gniazdo OBD2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gniazdo OBD2 zwykle znajduje się pod deską rozdzielczą po stronie kierowcy, w okolicy kolumny kierownicy, skrzynki bezpieczników albo dolnej części konsoli."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dlaczego ELM327 nie łączy się z autem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Przyczyną może być słaby adapter, brak zapłonu, niepoprawne parowanie Bluetooth, zajęte połączenie przez inną aplikację, nieobsługiwany protokół albo problem z gniazdem OBD2."
+          }
+        }
+      ]
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { darkBg: '#0f172a', panelBg: '#1e293b', brandRed: '#ef4444', brandRedHover: '#dc2626' }}}}
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-darkBg text-white font-sans antialiased">
+<nav class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center gap-3">
+    <a href="../index.html" class="text-xl md:text-2xl font-black tracking-wider flex items-center gap-2" aria-label="Mój Mechanik - strona główna">
+        <i class="fa-solid fa-wrench text-brandRed"></i>
+        <span class="whitespace-nowrap">MÓJ <span class="text-gray-400">MECHANIK</span></span>
+    </a>
+    <a href="../index.html" class="border border-gray-600 hover:border-brandRed text-white px-4 py-2 rounded-xl font-bold text-sm transition-all">Powrót</a>
+</nav>
+
+<header class="container mx-auto px-6 py-14 md:py-20">
+    <div class="max-w-4xl">
+        <div class="inline-flex items-center gap-2 bg-panelBg text-brandRed font-bold px-3 py-1 rounded-full text-xs tracking-wider mb-6 border border-gray-700">
+            <i class="fa-brands fa-bluetooth-b"></i>
+            ADAPTER OBD2 BLUETOOTH
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">ELM327 Bluetooth: jak podłączyć adapter OBD2 do telefonu?</h1>
+        <p class="text-gray-300 text-lg md:text-xl mb-8 max-w-3xl leading-relaxed">Adapter ELM327 Bluetooth pozwala aplikacji odczytać podstawowe dane OBD2 z auta. To najprostszy start do diagnostyki Check Engine, kodów DTC i parametrów live.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+            <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL" class="bg-brandRed hover:bg-brandRedHover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-3"><i class="fa-brands fa-google-play"></i>Pobierz z Google Play</a>
+            <a href="../check-engine/" class="border border-gray-600 hover:border-brandRed text-white px-8 py-4 rounded-xl font-bold text-lg transition-all">Poradnik Check Engine</a>
+        </div>
+    </div>
+</header>
+
+<main class="bg-[#0b1120] py-16 border-t border-gray-800">
+    <div class="container mx-auto px-6 max-w-5xl">
+        <section class="bg-panelBg rounded-3xl p-6 md:p-8 border border-gray-700 shadow-xl mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-5">Jak podłączyć ELM327 w 5 krokach?</h2>
+            <ol class="space-y-4 text-gray-300 leading-relaxed list-decimal list-inside">
+                <li>Znajdź gniazdo OBD2 pod deską rozdzielczą.</li>
+                <li>Włóż adapter ELM327 Bluetooth do gniazda.</li>
+                <li>Włącz zapłon, a w niektórych autach uruchom silnik.</li>
+                <li>Sparuj adapter w ustawieniach Bluetooth telefonu.</li>
+                <li>Uruchom Mój Mechanik i przejdź do skanera OBD2 live.</li>
+            </ol>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-6 mb-8">
+            <article class="bg-panelBg rounded-3xl p-6 border border-gray-700">
+                <h2 class="text-xl font-bold mb-3">Co można odczytać?</h2>
+                <ul class="space-y-3 text-gray-400">
+                    <li>Kody błędów DTC i informacje o Check Engine.</li>
+                    <li>Wybrane parametry live, np. obroty, temperatura, przepustnica.</li>
+                    <li>Dane zależne od sterownika i protokołu auta.</li>
+                </ul>
+            </article>
+            <article class="bg-panelBg rounded-3xl p-6 border border-gray-700">
+                <h2 class="text-xl font-bold mb-3">Czego adapter nie gwarantuje?</h2>
+                <ul class="space-y-3 text-gray-400">
+                    <li>Pełnej diagnostyki wszystkich modułów auta.</li>
+                    <li>Identycznej liczby parametrów w każdym modelu.</li>
+                    <li>Poprawnej pracy bardzo tanich klonów ELM327.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="bg-panelBg rounded-3xl p-6 md:p-8 border border-gray-700 shadow-xl mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-5">ELM327 nie łączy się - szybka checklista</h2>
+            <ul class="space-y-4 text-gray-300 leading-relaxed">
+                <li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Sprawdź, czy zapłon jest włączony.</span></li>
+                <li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Zamknij inne aplikacje OBD2, które mogą trzymać połączenie.</span></li>
+                <li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Usuń adapter z listy Bluetooth i sparuj go ponownie.</span></li>
+                <li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Jeśli problem wraca, sprawdź adapter na innym aucie albo użyj lepszej wersji urządzenia.</span></li>
+            </ul>
+        </section>
+
+        <section class="bg-darkBg rounded-3xl p-6 md:p-8 border border-gray-700">
+            <h2 class="text-2xl md:text-3xl font-bold mb-5">Powiązane poradniki</h2>
+            <div class="grid sm:grid-cols-3 gap-3 text-sm text-gray-300">
+                <a href="../check-engine/" class="bg-panelBg/80 border border-gray-700 rounded-xl p-3 block hover:border-brandRed hover:text-white transition">Check Engine</a>
+                <a href="../bledy-dtc/p0420/" class="bg-panelBg/80 border border-gray-700 rounded-xl p-3 block hover:border-brandRed hover:text-white transition">Błąd P0420</a>
+                <a href="../skaner-obd2-live.html" class="bg-panelBg/80 border border-gray-700 rounded-xl p-3 block hover:border-brandRed hover:text-white transition">Skaner OBD2 live</a>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer class="bg-darkBg py-8 border-t border-gray-800 text-center text-sm text-gray-500">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p>&copy; 2026 Mój Mechanik. Wszelkie prawa zastrzeżone.</p>
+        <div class="flex gap-6 flex-wrap justify-center">
+            <a href="../index.html" class="hover:text-white transition-colors">Strona główna</a>
+            <a href="../check-engine/" class="hover:text-white transition-colors">Check Engine</a>
+            <a href="../bledy-dtc/p0420/" class="hover:text-white transition-colors">P0420</a>
+            <a href="../polityka.html" class="hover:text-white transition-colors">Polityka Prywatności</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

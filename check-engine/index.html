@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWJFED9NVQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SWJFED9NVQ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Engine - co oznacza kontrolka i jak sprawdzić błąd OBD2?</title>
+    <meta name="description" content="Zapaliła się kontrolka Check Engine? Sprawdź, co oznacza, jak odczytać kod DTC przez OBD2 i kiedy jechać do mechanika. Poradnik Mój Mechanik AI.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://moj-startup.eu/check-engine/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Check Engine - co oznacza kontrolka?">
+    <meta property="og:description" content="Odczytaj błąd OBD2, sprawdź objawy i przygotuj opis problemu przed wizytą w warsztacie.">
+    <meta property="og:url" content="https://moj-startup.eu/check-engine/">
+    <meta property="og:locale" content="pl_PL">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Czy można jechać z kontrolką Check Engine?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jeżeli kontrolka świeci stale, auto często może dojechać do warsztatu, ale wymaga odczytu błędu. Jeżeli kontrolka miga, silnik pracuje nierówno, auto traci moc albo pojawia się dym, bezpieczniej zatrzymać pojazd i skontaktować się z serwisem."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jak sprawdzić przyczynę Check Engine?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Podłącz adapter OBD2 Bluetooth, odczytaj kod DTC w aplikacji i porównaj go z objawami. Kod wskazuje kierunek diagnostyki, ale nie zawsze oznacza konkretną część do wymiany."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy skasowanie błędu usuwa usterkę?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nie. Skasowanie błędu usuwa zapis ze sterownika, ale nie naprawia przyczyny. Jeżeli problem nadal istnieje, kod DTC wróci po krótkim czasie."
+          }
+        }
+      ]
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { darkBg: '#0f172a', panelBg: '#1e293b', brandRed: '#ef4444', brandRedHover: '#dc2626' }}}}
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-darkBg text-white font-sans antialiased">
+<nav class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center gap-3">
+    <a href="../index.html" class="text-xl md:text-2xl font-black tracking-wider flex items-center gap-2" aria-label="Mój Mechanik - strona główna">
+        <i class="fa-solid fa-wrench text-brandRed"></i>
+        <span class="whitespace-nowrap">MÓJ <span class="text-gray-400">MECHANIK</span></span>
+    </a>
+    <a href="../index.html" class="border border-gray-600 hover:border-brandRed text-white px-4 py-2 rounded-xl font-bold text-sm transition-all">Powrót</a>
+</nav>
+
+<header class="container mx-auto px-6 py-14 md:py-20">
+    <div class="max-w-4xl">
+        <div class="inline-flex items-center gap-2 bg-panelBg text-brandRed font-bold px-3 py-1 rounded-full text-xs tracking-wider mb-6 border border-gray-700">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            PORADNIK CHECK ENGINE
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">Check Engine: co oznacza kontrolka i jak sprawdzić błąd?</h1>
+        <p class="text-gray-300 text-lg md:text-xl mb-8 max-w-3xl leading-relaxed">Kontrolka Check Engine oznacza, że sterownik silnika wykrył problem. Mój Mechanik pomaga odczytać kod OBD2, uporządkować objawy i przygotować konkretne informacje dla warsztatu.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+            <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL" class="bg-brandRed hover:bg-brandRedHover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-3"><i class="fa-brands fa-google-play"></i>Pobierz z Google Play</a>
+            <a href="../elm327-bluetooth/" class="border border-gray-600 hover:border-brandRed text-white px-8 py-4 rounded-xl font-bold text-lg transition-all">Jak podłączyć ELM327?</a>
+        </div>
+    </div>
+</header>
+
+<main class="bg-[#0b1120] py-16 border-t border-gray-800">
+    <div class="container mx-auto px-6 max-w-5xl">
+        <section class="bg-panelBg rounded-3xl p-6 md:p-8 border border-gray-700 shadow-xl mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-5">Najkrótsza odpowiedź</h2>
+            <p class="text-gray-300 leading-relaxed">Check Engine nie mówi od razu, którą część wymienić. Najpierw odczytaj kod DTC przez OBD2, sprawdź objawy i oceń, czy auto może bezpiecznie jechać dalej.</p>
+        </section>
+
+        <section class="grid md:grid-cols-3 gap-6 mb-8">
+            <article class="bg-panelBg rounded-3xl p-6 border border-gray-700">
+                <h2 class="text-xl font-bold mb-3">1. Odczytaj kod DTC</h2>
+                <p class="text-gray-400">Użyj adaptera OBD2 Bluetooth i aplikacji, żeby zobaczyć kod, np. P0420, P0171 albo P0300.</p>
+            </article>
+            <article class="bg-panelBg rounded-3xl p-6 border border-gray-700">
+                <h2 class="text-xl font-bold mb-3">2. Sprawdź objawy</h2>
+                <p class="text-gray-400">Zanotuj spadek mocy, nierówną pracę, zapach spalin, większe spalanie, dymienie albo problemy z odpalaniem.</p>
+            </article>
+            <article class="bg-panelBg rounded-3xl p-6 border border-gray-700">
+                <h2 class="text-xl font-bold mb-3">3. Przygotuj raport</h2>
+                <p class="text-gray-400">Zapisz kod, objawy i warunki wystąpienia błędu. To ogranicza zgadywanie przy rozmowie z mechanikiem.</p>
+            </article>
+        </section>
+
+        <section class="bg-panelBg rounded-3xl p-6 md:p-8 border border-gray-700 shadow-xl mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-5">Kiedy nie ignorować kontrolki?</h2>
+            <ul class="space-y-4 text-gray-300 leading-relaxed">
+                <li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Kontrolka Check Engine miga zamiast świecić stale.</span></li>
+                <li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Silnik pracuje nierówno, gaśnie albo traci moc.</span></li>
+                <li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Pojawia się dym, zapach paliwa, przegrzewanie albo nietypowe dźwięki.</span></li>
+                <li class="flex gap-3"><i class="fa-solid fa-check text-brandRed mt-1"></i><span>Błąd wraca po skasowaniu lub pojawia się kilka kodów jednocześnie.</span></li>
+            </ul>
+        </section>
+
+        <section class="bg-darkBg rounded-3xl p-6 md:p-8 border border-gray-700">
+            <h2 class="text-2xl md:text-3xl font-bold mb-5">Powiązane poradniki</h2>
+            <div class="grid sm:grid-cols-3 gap-3 text-sm text-gray-300">
+                <a href="../elm327-bluetooth/" class="bg-panelBg/80 border border-gray-700 rounded-xl p-3 block hover:border-brandRed hover:text-white transition">ELM327 Bluetooth</a>
+                <a href="../bledy-dtc/p0420/" class="bg-panelBg/80 border border-gray-700 rounded-xl p-3 block hover:border-brandRed hover:text-white transition">Błąd P0420</a>
+                <a href="../bledy-dtc.html" class="bg-panelBg/80 border border-gray-700 rounded-xl p-3 block hover:border-brandRed hover:text-white transition">Błędy DTC</a>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer class="bg-darkBg py-8 border-t border-gray-800 text-center text-sm text-gray-500">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p>&copy; 2026 Mój Mechanik. Wszelkie prawa zastrzeżone.</p>
+        <div class="flex gap-6 flex-wrap justify-center">
+            <a href="../index.html" class="hover:text-white transition-colors">Strona główna</a>
+            <a href="../elm327-bluetooth/" class="hover:text-white transition-colors">ELM327</a>
+            <a href="../bledy-dtc/p0420/" class="hover:text-white transition-colors">P0420</a>
+            <a href="../polityka.html" class="hover:text-white transition-colors">Polityka Prywatności</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
