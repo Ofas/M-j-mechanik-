@@ -5,4 +5,29 @@
     <lastmod>2026-06-02</lastmod>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://moj-startup.eu/poradnik/</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://moj-startup.eu/poradnik/check-engine.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://moj-startup.eu/poradnik/auto-nie-ma-mocy.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://moj-startup.eu/poradnik/auto-szarpie.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://moj-startup.eu/poradnik/sprawdzenie-vin.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
