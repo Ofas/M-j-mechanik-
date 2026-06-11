@@ -49,7 +49,7 @@
                     <p>Aplikacja nie zbiera danych osobowych pozwalających na bezpośrednią identyfikację (imiona, e-mail). W celu zapewnienia funkcjonalności, stabilności oraz analizy statystycznej zbieramy:</p>
                     <ul class="list-disc ml-6 mt-2 space-y-1">
                         <li><strong>Identyfikator urządzenia (Device ID):</strong> Wykorzystywany wyłącznie do przypisania zakupionych żetonów oraz zapobiegania oszustwom.</li>
-                        <li><strong>Identyfikator reklamowy (Advertising ID / AAID):</strong> Przetwarzany anonimowo i wyłącznie na potrzeby zbierania statystyk aplikacji przez narzędzie Google Firebase Analytics (aplikacja nie wyświetla reklam).</li>
+                        <li><strong>Brak reklam i Android Advertising ID:</strong> Aplikacja nie wyświetla reklam i nie używa Android Advertising ID, Advertising ID ani AAID.</li>
                         <li><strong>Dane techniczne:</strong> Model urządzenia i wersja systemu w celu zapewnienia stabilności aplikacji (poprzez Firebase Crashlytics).</li>
                     </ul>
                 </div>
@@ -72,7 +72,7 @@
                     <h2 class="text-xl font-bold text-white mb-2">Usługi stron trzecich</h2>
                     <p>Aplikacja korzysta z zaufanych dostawców w celu poprawy jakości usług:</p>
                     <ul class="list-disc ml-6 mt-2 space-y-1">
-                        <li><strong>Google Firebase & Analytics:</strong> Śledzenie błędów oraz zbieranie anonimowych statystyk użytkowania z wykorzystaniem identyfikatora reklamowego systemu Android.</li>
+                        <li><strong>Google Firebase & Analytics:</strong> Śledzenie błędów oraz zbieranie zagregowanych statystyk użytkowania bez użycia Android Advertising ID.</li>
                         <li><strong>Google Play Billing:</strong> Obsługa bezpiecznych płatności natywnych.</li>
                     </ul>
                 </div>
@@ -124,7 +124,7 @@
                     <p>We do not collect directly identifiable personal data. To ensure app functionality, stability, and statistical analysis, we process:</p>
                     <ul class="list-disc ml-6 mt-2 space-y-1">
                         <li><strong>Device Identifier (Device ID):</strong> Used solely for managing purchased tokens and fraud prevention.</li>
-                        <li><strong>Advertising Identifier (Advertising ID / AAID):</strong> Processed anonymously and solely for application performance and analytics via Google Firebase Analytics (the app does not display advertisements).</li>
+                        <li><strong>No ads and no Android Advertising ID:</strong> The app does not display ads and does not use the Android Advertising ID, Advertising ID, or AAID.</li>
                         <li><strong>Technical Data:</strong> Device model and OS version for stability monitoring (via Firebase Crashlytics).</li>
                     </ul>
                 </div>
@@ -147,7 +147,7 @@
                     <h2 class="text-xl font-bold text-white mb-2">Third-Party Services</h2>
                     <p>The app uses trusted providers to improve service quality:</p>
                     <ul class="list-disc ml-6 mt-2 space-y-1">
-                        <li><strong>Google Firebase & Analytics:</strong> For crash reporting and anonymous usage statistics utilizing the Android Advertising ID.</li>
+                        <li><strong>Google Firebase & Analytics:</strong> For crash reporting and aggregated usage statistics without using the Android Advertising ID.</li>
                         <li><strong>Google Play Billing:</strong> For secure, native payment processing.</li>
                     </ul>
                 </div>
@@ -185,5 +185,13 @@
             </div>
         </section>
     </div>
+
+<section class="bg-brandRed py-12 border-t border-red-400 text-center">
+    <div class="container mx-auto px-6 max-w-4xl">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-4">Masz Check Engine? Sprawdź błąd w telefonie.</h2>
+        <p class="text-white/90 text-lg mb-6">Pobierz Mój Mechanik z Google Play.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL" class="inline-flex bg-white text-brandRed hover:bg-gray-100 px-8 py-4 rounded-xl font-bold text-lg transition-all items-center justify-center gap-3"><i class="fa-brands fa-google-play text-xl"></i>Pobierz Mój Mechanik z Google Play</a>
+    </div>
+</section>
 </body>
 </html>
