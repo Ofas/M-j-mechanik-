@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mój Mechanik - OBD2, VIN i diagnoza AI</title>
+  <meta name="description" content="Szybki start z aplikacją Mój Mechanik: OBD2, VIN, Check Engine, dane live i raport PDF AI po polsku.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://moj-startup.eu/start/">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0f172a;
+      --panel: #172033;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --line: #334155;
+      --red: #ef4444;
+      --red-dark: #dc2626;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .wrap {
+      width: min(980px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      font-weight: 900;
+      letter-spacing: .03em;
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 58px 0 42px;
+      text-align: center;
+    }
+
+    h1 {
+      max-width: 880px;
+      margin: 0 auto 18px;
+      font-size: clamp(38px, 7vw, 72px);
+      line-height: 1.06;
+      overflow-wrap: anywhere;
+    }
+
+    .lead {
+      max-width: 680px;
+      margin: 0 auto 30px;
+      color: var(--muted);
+      font-size: clamp(18px, 3vw, 24px);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 58px;
+      padding: 16px 28px;
+      border-radius: 8px;
+      background: var(--red);
+      color: white;
+      font-size: 20px;
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 18px 40px rgba(239, 68, 68, .22);
+    }
+
+    .button:hover {
+      background: var(--red-dark);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      padding: 14px 0 44px;
+    }
+
+    .card,
+    .partners {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 22px;
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 23px;
+      line-height: 1.25;
+      overflow-wrap: anywhere;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .partners {
+      margin: 0 0 54px;
+    }
+
+    .partners h2 {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .partner-links {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .partner-links a {
+      display: block;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      color: var(--muted);
+      text-align: center;
+      text-decoration: none;
+      background: #111827;
+      font-weight: 700;
+    }
+
+    .partner-links a:hover {
+      color: white;
+      border-color: var(--red);
+    }
+
+    footer {
+      padding: 26px 0;
+      color: #94a3b8;
+      text-align: center;
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+      h1 {
+        font-size: 28px;
+        line-height: 1.14;
+      }
+
+      h2 {
+        font-size: 21px;
+      }
+
+      .button {
+        width: 100%;
+        font-size: 18px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .cards,
+      .partner-links {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="brand" href="/">MÓJ MECHANIK</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Mój Mechanik - OBD2, VIN i diagnoza AI</h1>
+      <p class="lead">Sprawdź błędy auta, VIN i wygeneruj raport PDF dla mechanika.</p>
+      <a id="playLink" class="button" href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL&utm_source=start_page&utm_medium=link_in_bio&utm_campaign=moj_mechanik_start">Pobierz z Google Play</a>
+    </section>
+
+    <section class="cards" aria-label="Najważniejsze funkcje">
+      <article class="card">
+        <h2>Check engine? Sprawdź kod OBD2.</h2>
+        <p>Odczytaj błąd i zobacz możliwe przyczyny po polsku.</p>
+      </article>
+      <article class="card">
+        <h2>Kupujesz auto? Sprawdź VIN.</h2>
+        <p>Zweryfikuj dane pojazdu przed rozmową ze sprzedawcą.</p>
+      </article>
+      <article class="card">
+        <h2>Masz ELM327? Odczytaj błędy i dane live.</h2>
+        <p>Połącz adapter Bluetooth i sprawdź podstawowe dane diagnostyczne.</p>
+      </article>
+      <article class="card">
+        <h2>Potrzebujesz raportu? Wygeneruj PDF AI.</h2>
+        <p>Przygotuj prosty opis problemu do pokazania mechanikowi.</p>
+      </article>
+    </section>
+
+    <section class="partners" aria-label="Linki partnerskie">
+      <h2>Linki do śledzenia źródeł</h2>
+      <div class="partner-links">
+        <a href="/start/?partner=facebook">Facebook</a>
+        <a href="/start/?partner=tiktok">TikTok</a>
+        <a href="/start/?partner=qr">QR</a>
+        <a href="/start/?partner=obd_seller">Sprzedawcy OBD2</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    moj-startup.eu
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const partner = params.get("partner");
+    const playLink = document.getElementById("playLink");
+
+    if (partner && /^[a-zA-Z0-9_-]{1,60}$/.test(partner)) {
+      const url = new URL(playLink.href);
+      url.searchParams.set("utm_content", `partner_${partner}`);
+      playLink.href = url.toString();
+    }
+  </script>
+</body>
+</html>
