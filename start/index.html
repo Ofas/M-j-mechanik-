@@ -98,8 +98,7 @@
       padding: 14px 0 44px;
     }
 
-    .card,
-    .partners {
+    .card {
       border: 1px solid var(--line);
       border-radius: 8px;
       background: var(--panel);
@@ -118,37 +117,6 @@
       color: var(--muted);
     }
 
-    .partners {
-      margin: 0 0 54px;
-    }
-
-    .partners h2 {
-      text-align: center;
-      margin-bottom: 16px;
-    }
-
-    .partner-links {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .partner-links a {
-      display: block;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 12px;
-      color: var(--muted);
-      text-align: center;
-      text-decoration: none;
-      background: #111827;
-      font-weight: 700;
-    }
-
-    .partner-links a:hover {
-      color: white;
-      border-color: var(--red);
-    }
 
     footer {
       padding: 26px 0;
@@ -175,8 +143,7 @@
         padding-right: 16px;
       }
 
-      .cards,
-      .partner-links {
+      .cards {
         grid-template-columns: 1fr;
       }
 
@@ -217,16 +184,6 @@
         <h2>Potrzebujesz raportu? Wygeneruj PDF AI.</h2>
         <p>Przygotuj prosty opis problemu do pokazania mechanikowi.</p>
       </article>
-    </section>
-
-    <section class="partners" aria-label="Linki partnerskie">
-      <h2>Linki do śledzenia źródeł</h2>
-      <div class="partner-links">
-        <a href="/start/?partner=facebook">Facebook</a>
-        <a href="/start/?partner=tiktok">TikTok</a>
-        <a href="/start/?partner=qr">QR</a>
-        <a href="/start/?partner=obd_seller">Sprzedawcy OBD2</a>
-      </div>
     </section>
   </main>
 
