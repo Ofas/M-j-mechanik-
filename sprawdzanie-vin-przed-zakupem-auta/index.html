@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWJFED9NVQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SWJFED9NVQ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprawdzanie VIN przed zakupem auta – raport historii</title>
+    <meta name="description" content="Planujesz kupno używanego auta? Sprawdź numer VIN i uzyskaj szczegółowy raport historii pojazdu bezpośrednio w aplikacji Mój Mechanik.">
+    <link rel="canonical" href="https://moj-startup.eu/sprawdzanie-vin-przed-zakupem-auta/">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: {
+            darkBg: '#0f172a',
+            panelBg: '#1e293b',
+            brandRed: '#ef4444',
+            brandRedHover: '#dc2626'
+        }}}}
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- FAQ Schema JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Co to jest numer VIN i gdzie go szukać?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VIN (Vehicle Identification Number) to unikalny 17-cyfrowy numer identyfikacyjny pojazdu. Znajdziesz go w dowodzie rejestracyjnym (pole E), na tabliczce znamionowej na podszybiu lub na słupku bocznym pojazdu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy darmowe sprawdzenie VIN zawiera pełną historię auta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Podstawowe dekodowanie VIN pozwala na darmowe zweryfikowanie marki, modelu, roku produkcji oraz typu silnika. Pełne raporty historyczne (szkody powypadkowe, historia przebiegów, kradzieże) są zazwyczaj płatne w aplikacji z uwagi na koszty zakupu danych z zewnętrznych baz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Co oznaczają poszczególne sekcje w numerze VIN?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Numer VIN dzieli się na trzy części: WMI (znaki 1-3 to kod kraju i producenta), VDS (znaki 4-9 określają cechy techniczne pojazdu) oraz VIS (znaki 10-17 to unikalny numer seryjny, w tym rok produkcji i fabryka)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jakie błędy w ogłoszeniach można wykryć dzięki numerowi VIN?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dzięki numerowi VIN możesz zweryfikować, czy podany w ogłoszeniu rok produkcji jest prawdziwy, czy auto posiada fabryczne wyposażenie (np. typ silnika, klimatyzacja) oraz czy kolor lakieru zgadza się ze specyfikacją."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy aplikacja Mój Mechanik pozwala sprawdzić historię w CEPiK?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aplikacja ułatwia weryfikację auta, w tym kieruje i pomaga w integracji z bazami danych historii pojazdów (np. krajowy rejestr CEPiK po podaniu numeru rejestracyjnego i daty pierwszej rejestracji)."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-darkBg text-white font-sans antialiased">
+
+<nav class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center gap-3">
+    <a href="/" class="text-xl md:text-2xl font-black tracking-wider flex items-center gap-2" aria-label="Mój Mechanik - strona główna">
+        <i class="fa-solid fa-wrench text-brandRed"></i>
+        <span class="whitespace-nowrap">MÓJ <span class="text-gray-400">MECHANIK</span></span>
+    </a>
+    <div class="flex items-center gap-4 shrink-0">
+        <a href="/check-engine/" class="text-sm text-gray-300 hover:text-white hidden md:inline-block transition-colors">Check Engine</a>
+        <a href="/elm327-bluetooth/" class="text-sm text-gray-300 hover:text-white hidden md:inline-block transition-colors">ELM327</a>
+        <a href="/bledy-dtc/p0420/" class="text-sm text-gray-300 hover:text-white hidden md:inline-block transition-colors">P0420</a>
+        <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL" class="transition-transform hover:scale-105 block" aria-label="Pobierz Mój Mechanik z Google Play">
+            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png" alt="Pobierz z Google Play" class="h-10 md:h-14 w-auto object-contain">
+        </a>
+    </div>
+</nav>
+
+<main class="container mx-auto px-6 py-10 max-w-4xl">
+    <header class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 bg-panelBg text-brandRed font-bold px-3 py-1 rounded-full text-xs tracking-wider mb-6 border border-gray-700">
+            <i class="fa-solid fa-barcode"></i>
+            WERYFIKACJA HISTORII POJAZDU
+        </div>
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+            Sprawdzanie VIN przed zakupem auta – <br class="hidden md:inline">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400">historia, specyfikacja i bezwypadkowość</span>
+        </h1>
+        <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
+            Zabezpiecz swoją transakcję i unikaj kosztownych błędów. Sprawdź numer VIN i poznaj fabryczną specyfikację auta przed podpisaniem umowy.
+        </p>
+    </header>
+
+    <article class="bg-panelBg rounded-3xl p-6 md:p-10 border border-gray-700 shadow-xl mb-12">
+        <p class="text-gray-300 text-lg leading-relaxed mb-6">
+            Zakup używanego samochodu to inwestycja obarczona sporym ryzykiem. Nieuczciwi sprzedawcy często ukrywają przeszłość wypadkową pojazdu, cofają stan licznika lub podają nieprawdziwy rok produkcji. Podstawowym i najważniejszym krokiem weryfikacji przed zakupem jest dokładne <strong>sprawdzanie VIN</strong>.
+        </p>
+
+        <h2 class="text-2xl font-bold text-white mt-8 mb-4 flex items-center gap-3">
+            <i class="fa-solid fa-circle-question text-brandRed"></i> Czym jest numer VIN i do czego służy?
+        </h2>
+        <p class="text-gray-400 leading-relaxed mb-6">
+            Numer <strong>VIN (Vehicle Identification Number)</strong> to unikalny, 17-cyfrowy kod nadawany każdemu pojazdowi przez producenta. Można go porównać do samochodowego numeru PESEL. Zapisana jest w nim kompletna informacja o marce, kraju produkcji, fabryce, a także szczegółowej specyfikacji technicznej i wyposażeniu pojazdu.
+        </p>
+        <p class="text-gray-400 leading-relaxed mb-6">
+            Dzięki numerowi VIN możemy sprawdzić m.in., czy auto opuściło fabrykę z takim silnikiem i wyposażeniem, jakie deklaruje sprzedający (np. czy nie jest to tzw. przekładka z wersjami na rynek brytyjski).
+        </p>
+
+        <h2 class="text-2xl font-bold text-white mt-8 mb-4 flex items-center gap-3">
+            <i class="fa-solid fa-magnifying-glass-chart text-brandRed"></i> Co można wykryć dzięki raportowi historii pojazdu?
+        </h2>
+        <p class="text-gray-400 leading-relaxed mb-4">
+            Dostęp do historii pojazdu po VIN pozwala uchronić się przed zakupem wadliwego auta. Raport historii pojazdu może zawierać dane o:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-gray-400 mb-8 pl-2">
+            <li><strong>Cofniętych licznikach</strong> – rejestry przebiegów z przeglądów technicznych i wizyt serwisowych.</li>
+            <li><strong>Szkodach powypadkowych</strong> – odnotowane naprawy blacharsko-lakiernicze zgłoszone do ubezpieczycieli.</li>
+            <li><strong>Przeznaczeniu pojazdu</strong> – informacja o tym, czy auto nie służyło jako taksówka lub nie pochodzi z wypożyczalni.</li>
+            <li><strong>Akcjach serwisowych</strong> – fabryczne recalls ogłaszane przez producenta.</li>
+            <li><strong>Figurowaniu w bazach pojazdów skradzionych.</strong></li>
+        </ul>
+
+        <section class="bg-red-950/20 border border-red-500/20 rounded-2xl p-6 mb-8">
+            <h3 class="text-lg font-bold text-red-400 mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-circle-exclamation"></i> Ograniczenia sprawdzania VIN
+            </h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-400 text-sm">
+                <li>Raport VIN bazuje na informacjach zarejestrowanych w bazach ubezpieczeniowych i serwisowych. Jeśli naprawa powypadkowa auta została wykonana prywatnie bez zgłoszenia szkody z AC/OC, informacja o kolizji nie pojawi się w raporcie.</li>
+                <li>Darmowe sprawdzenie VIN pozwala na ogólne zdekodowanie podstawowych informacji technicznych (rocznik, silnik, model). Dostęp do szczegółowych danych historycznych i historii ubezpieczeniowej często wiąże się z opłatą ze względu na koszty pobierania danych z baz komercyjnych.</li>
+                <li>Samo sprawdzenie VIN nie zastępuje fizycznej kontroli auta u mechanika lub na stacji kontroli pojazdów. Zawsze zalecamy wykonanie oględzin osobistych przed zakupem.</li>
+            </ul>
+        </section>
+
+        <h2 class="text-2xl font-bold text-white mt-8 mb-4 flex items-center gap-3">
+            <i class="fa-solid fa-clipboard-check text-brandRed"></i> Jak bezpiecznie zweryfikować auto przed kupnem?
+        </h2>
+        <p class="text-gray-400 leading-relaxed mb-4">
+            Przed podjęciem decyzji o zakupie pojazdu zawsze wykonaj następujące kroki:
+        </p>
+        <ol class="list-decimal list-inside space-y-3 text-gray-400 mb-8 pl-2">
+            <li>Poproś sprzedawcę o podanie numeru VIN, numeru rejestracyjnego oraz daty pierwszej rejestracji.</li>
+            <li>Wpisz te dane w aplikacji <strong>Mój Mechanik</strong>, aby zdekodować parametry i przejrzeć dostępne rejestry.</li>
+            <li>Porównaj numer wybity na karoserii auta ze specyfikacją z raportu.</li>
+            <li>Wykonaj fizyczne oględziny i diagnostykę OBD2 na żywo.</li>
+        </ol>
+
+        <div class="bg-darkBg/50 border border-gray-700 rounded-3xl p-8 text-center mt-10">
+            <h3 class="text-2xl font-bold text-white mb-4">Przeanalizuj auto w aplikacji Mój Mechanik</h3>
+            <p class="text-gray-400 mb-6 max-w-lg mx-auto">
+                Wpisz numer VIN, sprawdź fabryczne wyposażenie i skorzystaj z inteligentnej analizy oferty zakupu.
+            </p>
+            <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL" class="inline-flex bg-brandRed hover:bg-brandRedHover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-red-500/20 items-center justify-center gap-3" id="btn-download-playstore">
+                <i class="fa-brands fa-google-play"></i>
+                Pobierz z Google Play
+            </a>
+        </div>
+    </article>
+
+    <section class="mb-12">
+        <h2 class="text-3xl font-bold text-white text-center mb-8">Często Zadawane Pytania (FAQ)</h2>
+        <div class="space-y-4">
+            <div class="bg-panelBg border border-gray-700 rounded-2xl p-5 cursor-pointer hover:border-gray-600 faq-item">
+                <div class="flex justify-between items-center font-bold text-white text-lg">
+                    <span>Co to jest numer VIN i gdzie go szukać?</span>
+                    <i class="fa-solid fa-plus text-brandRed faq-icon"></i>
+                </div>
+                <div class="text-gray-400 mt-3 hidden faq-answer">
+                    VIN (Vehicle Identification Number) to 17-znakowy kod alfanumeryczny. W samochodzie znajduje się najczęściej na tabliczce znamionowej umieszczonej na podszybiu (widocznej z zewnątrz przez przednią szybę), na słupku bocznym po stronie kierowcy, a także w dowodzie rejestracyjnym w polu "E".
+                </div>
+            </div>
+            <div class="bg-panelBg border border-gray-700 rounded-2xl p-5 cursor-pointer hover:border-gray-600 faq-item">
+                <div class="flex justify-between items-center font-bold text-white text-lg">
+                    <span>Czy darmowe sprawdzenie VIN zawiera pełną historię auta?</span>
+                    <i class="fa-solid fa-plus text-brandRed faq-icon"></i>
+                </div>
+                <div class="text-gray-400 mt-3 hidden faq-answer">
+                    Darmowe dekodery VIN pozwalają sprawdzić podstawy: markę, model, rok modelowy, typ nadwozia oraz wersję silnikową. Pełna historia ubezpieczeniowa, odnotowane szkody oraz historia drogomierza w bazach międzynarodowych wymaga zakupu rozszerzonego raportu.
+                </div>
+            </div>
+            <div class="bg-panelBg border border-gray-700 rounded-2xl p-5 cursor-pointer hover:border-gray-600 faq-item">
+                <div class="flex justify-between items-center font-bold text-white text-lg">
+                    <span>Co oznaczają poszczególne sekcje w numerze VIN?</span>
+                    <i class="fa-solid fa-plus text-brandRed faq-icon"></i>
+                </div>
+                <div class="text-gray-400 mt-3 hidden faq-answer">
+                    VIN składa się z trzech części. Znaki 1-3 (WMI) identyfikują producenta i kraj pochodzenia. Znaki 4-9 (VDS) opisują parametry techniczne i wyposażenie bezpieczeństwa. Znaki 10-17 (VIS) to sekcja identyfikująca konkretny egzemplarz, w tym rocznik oraz numer seryjny.
+                </div>
+            </div>
+            <div class="bg-panelBg border border-gray-700 rounded-2xl p-5 cursor-pointer hover:border-gray-600 faq-item">
+                <div class="flex justify-between items-center font-bold text-white text-lg">
+                    <span>Jakie błędy w ogłoszeniach można wykryć dzięki numerowi VIN?</span>
+                    <i class="fa-solid fa-plus text-brandRed faq-icon"></i>
+                </div>
+                <div class="text-gray-400 mt-3 hidden faq-answer">
+                    Sprawdzając VIN, możesz łatwo wychwycić kłamstwa w ogłoszeniach. Często dotyczy to zaniżania rocznika (rok produkcji vs rok pierwszej rejestracji), deklarowania bogatszego wyposażenia niż fabryczne czy ukrywania faktu, że auto w specyfikacji fabrycznej miało inny silnik.
+                </div>
+            </div>
+            <div class="bg-panelBg border border-gray-700 rounded-2xl p-5 cursor-pointer hover:border-gray-600 faq-item">
+                <div class="flex justify-between items-center font-bold text-white text-lg">
+                    <span>Czy aplikacja Mój Mechanik pozwala sprawdzić historię w CEPiK?</span>
+                    <i class="fa-solid fa-plus text-brandRed faq-icon"></i>
+                </div>
+                <div class="text-gray-400 mt-3 hidden faq-answer">
+                    Tak, nasza aplikacja posiada integrację pomagającą zweryfikować auto w bazie CEPiK (Centralnej Ewidencji Pojazdów i Kierowców). Do tego sprawdzenia oprócz numeru VIN potrzebny będzie również numer rejestracyjny pojazdu oraz data pierwszej rejestracji.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-panelBg/50 border border-gray-800 rounded-3xl p-6">
+        <h4 class="text-brandRed font-bold mb-4 text-sm uppercase tracking-wider">Przydatne linki wewnętrzne:</h4>
+        <div class="flex flex-wrap gap-3">
+            <a href="/diagnostyka-obd2-przez-telefon/" class="bg-panelBg border border-gray-700 rounded-xl px-4 py-2 text-sm text-gray-300 hover:border-brandRed hover:text-white transition">Diagnostyka OBD2 przez telefon</a>
+            <a href="/diagnoza-ai-usterki-auta/" class="bg-panelBg border border-gray-700 rounded-xl px-4 py-2 text-sm text-gray-300 hover:border-brandRed hover:text-white transition">Diagnoza AI usterki samochodu</a>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-darkBg py-8 border-t border-gray-800 text-center text-sm text-gray-500">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p>&copy; 2026 Mój Mechanik. Wszelkie prawa zastrzeżone.</p>
+        <div class="flex gap-6 flex-wrap justify-center">
+            <a href="/#data-deletion" class="hover:text-white transition-colors">Usuwanie danych</a>
+            <a href="/check-engine/" class="hover:text-white transition-colors">Check Engine</a>
+            <a href="/elm327-bluetooth/" class="hover:text-white transition-colors">ELM327</a>
+            <a href="/bledy-dtc/p0420/" class="hover:text-white transition-colors">P0420</a>
+            <a href="/polityka.html" class="hover:text-white transition-colors">Polityka Prywatności</a>
+            <a href="mailto:delma1212@gmail.com" class="hover:text-white transition-colors">Kontakt</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const answer = item.querySelector('.faq-answer');
+            const icon = item.querySelector('.faq-icon');
+            answer.classList.toggle('hidden');
+            if (answer.classList.contains('hidden')) {
+                icon.classList.remove('fa-minus');
+                icon.classList.add('fa-plus');
+            } else {
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+            }
+        });
+    });
+</script>
+</body>
+</html>

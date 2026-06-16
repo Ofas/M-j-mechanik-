@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWJFED9NVQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SWJFED9NVQ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostyka OBD2 przez telefon: skasuj Check Engine</title>
+    <meta name="description" content="Świeci się Check Engine? Zobacz, jak wykonać diagnostykę OBD2 przez telefon za pomocą adaptera ELM327 i aplikacji Mój Mechanik.">
+    <link rel="canonical" href="https://moj-startup.eu/diagnostyka-obd2-przez-telefon/">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: {
+            darkBg: '#0f172a',
+            panelBg: '#1e293b',
+            brandRed: '#ef4444',
+            brandRedHover: '#dc2626'
+        }}}}
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- FAQ Schema JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Czy aplikacja Mój Mechanik zadziała z każdym adapterem ELM327?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aplikacja jest kompatybilna z większością standardowych bezprzewodowych interfejsów OBD2 Bluetooth i Wi-Fi opartych na układzie ELM327 (np. Vgate iCar, OBDLink czy popularne tanie kostki diagnostyczne)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy skasowanie błędu na telefonie naprawi mój samochód?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nie, kasowanie kodów błędów DTC usuwa jedynie ich informację z pamięci komputera pojazdu (wygasza kontrolkę Check Engine). Jeśli usterka mechaniczna lub elektryczna nie została fizycznie usunięta, błąd powróci po przejechaniu kilku kilometrów."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jak połączyć telefon z interfejsem OBD2 przez Bluetooth?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wepnij interfejs do gniazda OBD2 inwentaryzowanego pojazdu, włącz Bluetooth w ustawieniach telefonu i sparuj go z kostką (PIN to zwykle 1234 lub 0000). Następnie otwórz aplikację Mój Mechanik, włącz zapłon w samochodzie i kliknij połącz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy diagnostyka telefoniczna jest bezpieczna dla auta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak, odczytywanie parametrów na żywo oraz kasowanie standardowych błędów silnika (DTC) w protokole OBD2 jest w pełni bezpieczne. Aplikacja nie modyfikuje oprogramowania silnika ani nie zmienia map paliwowych."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy aplikacja zastępuje wizytę u mechanika?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nie, aplikacja nie zastępuje profesjonalnego warsztatu. Pomaga jedynie kierowcy zrozumieć usterkę, zlokalizować jej ogólny obszar i przygotować się do rozmowy z mechanikiem, co pozwala uniknąć naciągania na niepotrzebne naprawy."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-darkBg text-white font-sans antialiased">
+
+<nav class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center gap-3">
+    <a href="/" class="text-xl md:text-2xl font-black tracking-wider flex items-center gap-2" aria-label="Mój Mechanik - strona główna">
+        <i class="fa-solid fa-wrench text-brandRed"></i>
+        <span class="whitespace-nowrap">MÓJ <span class="text-gray-400">MECHANIK</span></span>
+    </a>
+    <div class="flex items-center gap-4 shrink-0">
+        <a href="/check-engine/" class="text-sm text-gray-300 hover:text-white hidden md:inline-block transition-colors">Check Engine</a>
+        <a href="/elm327-bluetooth/" class="text-sm text-gray-300 hover:text-white hidden md:inline-block transition-colors">ELM327</a>
+        <a href="/bledy-dtc/p0420/" class="text-sm text-gray-300 hover:text-white hidden md:inline-block transition-colors">P0420</a>
+        <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL" class="transition-transform hover:scale-105 block" aria-label="Pobierz Mój Mechanik z Google Play">
+            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png" alt="Pobierz z Google Play" class="h-10 md:h-14 w-auto object-contain">
+        </a>
+    </div>
+</nav>
+
+<main class="container mx-auto px-6 py-10 max-w-4xl">
+    <header class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 bg-panelBg text-brandRed font-bold px-3 py-1 rounded-full text-xs tracking-wider mb-6 border border-gray-700">
+            <i class="fa-solid fa-gauge-high"></i>
+            SAMODZIELNA DIAGNOSTYKA OBD2
+        </div>
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+            Diagnostyka OBD2 przez telefon – <br class="hidden md:inline">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400">check engine, ELM327 i kody DTC</span>
+        </h1>
+        <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
+            Zapalona kontrolka silnika nie musi oznaczać natychmiastowej wizyty w warsztacie. Dowiedz się, jak łatwo połączyć telefon z autem i samodzielnie sprawdzić błędy.
+        </p>
+    </header>
+
+    <article class="bg-panelBg rounded-3xl p-6 md:p-10 border border-gray-700 shadow-xl mb-12">
+        <p class="text-gray-300 text-lg leading-relaxed mb-6">
+            Gdy na desce rozdzielczej zapala się żółta kontrolka <strong>Check Engine</strong>, większość kierowców odczuwa niepokój. Wizyta w serwisie tylko po to, by podłączyć komputer i odczytać błędy, kosztuje czas i pieniądze. Dzięki nowoczesnej technologii diagnostykę samochodową możesz przeprowadzić samodzielnie, używając telefonu.
+        </p>
+
+        <h2 class="text-2xl font-bold text-white mt-8 mb-4 flex items-center gap-3">
+            <i class="fa-solid fa-circle-nodes text-brandRed"></i> Jak działa diagnostyka samochodowa przez telefon?
+        </h2>
+        <p class="text-gray-400 leading-relaxed mb-6">
+            Współczesne samochody wyposażone są w ujednolicony system diagnostyczny <strong>OBD2</strong>. Pozwala on na komunikację komputera pokładowego z zewnętrznymi urządzeniami. Aby zamienić swój smartfon w mobilny skaner diagnostyczny, potrzebujesz bezprzewodowego interfejsu (np. popularnego adaptera <strong>ELM327 Bluetooth</strong> lub Wi-Fi) oraz aplikacji <strong>Mój Mechanik</strong>.
+        </p>
+        <p class="text-gray-400 leading-relaxed mb-6">
+            Aplikacja łączy się z samochodem za pośrednictwem adaptera, odczytując z pamięci komputera kody błędów DTC oraz parametry pracy silnika w czasie rzeczywistym. Dzięki temu dowiesz się dokładnie, który czujnik zarejestrował problem.
+        </p>
+
+        <h2 class="text-2xl font-bold text-white mt-8 mb-4 flex items-center gap-3">
+            <i class="fa-solid fa-list-check text-brandRed"></i> Jak krok po kroku skasować błąd Check Engine?
+        </h2>
+        <p class="text-gray-400 leading-relaxed mb-4">
+            Cały proces odczytu i kasowania błędów jest niezwykle prosty i zajmuje zaledwie kilka minut:
+        </p>
+        <ol class="list-decimal list-inside space-y-3 text-gray-400 mb-8 pl-2">
+            <li><strong>Zlokalizuj gniazdo OBD2</strong> w swoim samochodzie (zwykle pod deską rozdzielczą w okolicach kierownicy lub w konsoli środkowej).</li>
+            <li><strong>Wepnij adapter ELM327</strong> do gniazda OBD2.</li>
+            <li>Uruchom Bluetooth w telefonie i sparuj go z adapterem (kod to zazwyczaj <code class="bg-darkBg px-2 py-0.5 rounded text-white">1234</code> lub <code class="bg-darkBg px-2 py-0.5 rounded text-white">0000</code>).</li>
+            <li>Włącz zapłon w samochodzie (pozycja kluczyka „ON” – kontrolki świecą, silnik wyłączony).</li>
+            <li>Otwórz aplikację <strong>Mój Mechanik</strong> i wybierz połączenie z interfejsem.</li>
+            <li>Odczytaj zapisane błędy DTC, a następnie skorzystaj z opcji wygaszenia kontrolki silnika.</li>
+        </ol>
+
+        <section class="bg-red-950/20 border border-red-500/20 rounded-2xl p-6 mb-8">
+            <h3 class="text-lg font-bold text-red-400 mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-circle-exclamation"></i> Ograniczenia diagnostyki OBD2 i aplikacji
+            </h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-400 text-sm">
+                <li>Aplikacja pozwala na odczyt podstawowych kodów błędów DTC oraz parametrów silnika (standard OBD2). Nie obsługuje głębokiego kodowania modułów ani funkcji serwisowych zastrzeżonych dla komputerów warsztatowych.</li>
+                <li>Samo wykasowanie błędu nie usunie usterki fizycznej. Jeśli element (np. uszkodzona cewka zapłonowa czy sonda lambda) nie zostanie wymieniony, Check Engine zapali się ponownie po krótkiej jeździe.</li>
+                <li>Aplikacja ma charakter wyłącznie informacyjny i nie zastępuje profesjonalnego mechanika. Służy do tego, by kierowca mógł świadomie kontrolować stan pojazdu przed wizytą w serwisie.</li>
+            </ul>
+        </section>
+
+        <h2 class="text-2xl font-bold text-white mt-8 mb-4 flex items-center gap-3">
+            <i class="fa-solid fa-gauge text-brandRed"></i> Parametry Live Data – monitoruj silnik na żywo
+        </h2>
+        <p class="text-gray-400 leading-relaxed mb-6">
+            Oprócz odczytywania błędów aplikacja pozwala na monitorowanie parametrów jazdy w czasie rzeczywistym. Możesz obserwować m.in.: temperaturę płynu chłodzącego, obroty silnika, napięcie akumulatora oraz ciśnienie doładowania. Te dane pomogą Ci dostrzec drobne anomalie w pracy osprzętu, zanim doprowadzą one do poważniejszej usterki.
+        </p>
+
+        <div class="bg-darkBg/50 border border-gray-700 rounded-3xl p-8 text-center mt-10">
+            <h3 class="text-2xl font-bold text-white mb-4">Pobierz aplikację Mój Mechanik</h3>
+            <p class="text-gray-400 mb-6 max-w-lg mx-auto">
+                Sprawdź podstawowe błędy auta, monitoruj parametry na żywo i wygeneruj raport PDF przed wizytą w warsztacie.
+            </p>
+            <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL" class="inline-flex bg-brandRed hover:bg-brandRedHover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-red-500/20 items-center justify-center gap-3" id="btn-download-playstore">
+                <i class="fa-brands fa-google-play"></i>
+                Pobierz z Google Play
+            </a>
+        </div>
+    </article>
+
+    <section class="mb-12">
+        <h2 class="text-3xl font-bold text-white text-center mb-8">Często Zadawane Pytania (FAQ)</h2>
+        <div class="space-y-4">
+            <div class="bg-panelBg border border-gray-700 rounded-2xl p-5 cursor-pointer hover:border-gray-600 faq-item">
+                <div class="flex justify-between items-center font-bold text-white text-lg">
+                    <span>Czy aplikacja Mój Mechanik zadziała z każdym adapterem ELM327?</span>
+                    <i class="fa-solid fa-plus text-brandRed faq-icon"></i>
+                </div>
+                <div class="text-gray-400 mt-3 hidden faq-answer">
+                    Tak, nasza aplikacja jest kompatybilna z większością standardowych, bezprzewodowych interfejsów diagnostycznych OBD2 opartych na układzie ELM327 (zarówno Bluetooth, jak i Wi-Fi). Polecamy korzystanie ze sprawdzonych adapterów (np. Vgate iCar), aby zapewnić stabilność połączenia.
+                </div>
+            </div>
+            <div class="bg-panelBg border border-gray-700 rounded-2xl p-5 cursor-pointer hover:border-gray-600 faq-item">
+                <div class="flex justify-between items-center font-bold text-white text-lg">
+                    <span>Czy skasowanie błędu na telefonie naprawi mój samochód?</span>
+                    <i class="fa-solid fa-plus text-brandRed faq-icon"></i>
+                </div>
+                <div class="text-gray-400 mt-3 hidden faq-answer">
+                    Nie. Kasowanie błędów w aplikacji usuwa jedynie wpis z pamięci sterownika (wygasza kontrolkę Check Engine). Jeśli przyczyna błędu (np. uszkodzona sonda lambda) nadal istnieje, komputer ponownie wykryje usterkę i kontrolka zapali się z powrotem.
+                </div>
+            </div>
+            <div class="bg-panelBg border border-gray-700 rounded-2xl p-5 cursor-pointer hover:border-gray-600 faq-item">
+                <div class="flex justify-between items-center font-bold text-white text-lg">
+                    <span>Jak połączyć telefon z interfejsem OBD2 przez Bluetooth?</span>
+                    <i class="fa-solid fa-plus text-brandRed faq-icon"></i>
+                </div>
+                <div class="text-gray-400 mt-3 hidden faq-answer">
+                    Wepnij kostkę ELM327 w gniazdo OBD2 w samochodzie. W ustawieniach telefonu włącz Bluetooth i sparuj z nowym urządzeniem o nazwie OBDII (kod parowania to przeważnie 1234 lub 0000). Następnie włącz zapłon, otwórz naszą aplikację i kliknij przycisk połączenia.
+                </div>
+            </div>
+            <div class="bg-panelBg border border-gray-700 rounded-2xl p-5 cursor-pointer hover:border-gray-600 faq-item">
+                <div class="flex justify-between items-center font-bold text-white text-lg">
+                    <span>Czy diagnostyka telefoniczna jest bezpieczna dla auta?</span>
+                    <i class="fa-solid fa-plus text-brandRed faq-icon"></i>
+                </div>
+                <div class="text-gray-400 mt-3 hidden faq-answer">
+                    Tak, odczyt błędów i parametrów w standardzie OBD2 jest całkowicie bezpieczny dla pojazdu. Aplikacja pobiera dane pasywnie i nie wpływa na oprogramowanie silnika, co wyklucza ryzyko uszkodzenia sterownika.
+                </div>
+            </div>
+            <div class="bg-panelBg border border-gray-700 rounded-2xl p-5 cursor-pointer hover:border-gray-600 faq-item">
+                <div class="flex justify-between items-center font-bold text-white text-lg">
+                    <span>Czy aplikacja zastępuje wizytę u mechanika?</span>
+                    <i class="fa-solid fa-plus text-brandRed faq-icon"></i>
+                </div>
+                <div class="text-gray-400 mt-3 hidden faq-answer">
+                    Nie. Aplikacja ma charakter pomocniczy. Pomaga kierowcy samodzielnie zorientować się w problemie i uniknąć naciągania w warsztacie, jednak ostateczną naprawę mechaniczną oraz profesjonalne kodowanie podzespołów powinien wykonać wykwalifikowany serwis.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-panelBg/50 border border-gray-800 rounded-3xl p-6">
+        <h4 class="text-brandRed font-bold mb-4 text-sm uppercase tracking-wider">Przydatne linki wewnętrzne:</h4>
+        <div class="flex flex-wrap gap-3">
+            <a href="/sprawdzanie-vin-przed-zakupem-auta/" class="bg-panelBg border border-gray-700 rounded-xl px-4 py-2 text-sm text-gray-300 hover:border-brandRed hover:text-white transition">Sprawdzanie VIN przed zakupem auta</a>
+            <a href="/diagnoza-ai-usterki-auta/" class="bg-panelBg border border-gray-700 rounded-xl px-4 py-2 text-sm text-gray-300 hover:border-brandRed hover:text-white transition">Diagnoza AI usterki samochodu</a>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-darkBg py-8 border-t border-gray-800 text-center text-sm text-gray-500">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p>&copy; 2026 Mój Mechanik. Wszelkie prawa zastrzeżone.</p>
+        <div class="flex gap-6 flex-wrap justify-center">
+            <a href="/#data-deletion" class="hover:text-white transition-colors">Usuwanie danych</a>
+            <a href="/check-engine/" class="hover:text-white transition-colors">Check Engine</a>
+            <a href="/elm327-bluetooth/" class="hover:text-white transition-colors">ELM327</a>
+            <a href="/bledy-dtc/p0420/" class="hover:text-white transition-colors">P0420</a>
+            <a href="/polityka.html" class="hover:text-white transition-colors">Polityka Prywatności</a>
+            <a href="mailto:delma1212@gmail.com" class="hover:text-white transition-colors">Kontakt</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const answer = item.querySelector('.faq-answer');
+            const icon = item.querySelector('.faq-icon');
+            answer.classList.toggle('hidden');
+            if (answer.classList.contains('hidden')) {
+                icon.classList.remove('fa-minus');
+                icon.classList.add('fa-plus');
+            } else {
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+            }
+        });
+    });
+</script>
+</body>
+</html>

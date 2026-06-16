@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWJFED9NVQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SWJFED9NVQ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnoza AI usterki auta: opisz objawy i pobierz PDF</title>
+    <meta name="description" content="Poczułeś szarpanie w aucie? Opisz objawy własnymi słowami w aplikacji Mój Mechanik i uzyskaj diagnozę AI oraz raport diagnostyczny PDF.">
+    <link rel="canonical" href="https://moj-startup.eu/diagnoza-ai-usterki-auta/">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: {
+            darkBg: '#0f172a',
+            panelBg: '#1e293b',
+            brandRed: '#ef4444',
+            brandRedHover: '#dc2626'
+        }}}}
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- FAQ Schema JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Jak działa sztuczna inteligencja w diagnostyce samochodowej?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sztuczna inteligencja w aplikacji Mój Mechanik działa na bazie zaawansowanych modeli językowych. Analizuje ona opisane przez kierowcę objawy (np. szarpanie przy przyspieszaniu) w połączeniu z odczytanymi kodami błędów OBD2 i wskazuje najbardziej prawdopodobne przyczyny usterki."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy diagnoza AI zastępuje profesjonalne badanie w warsztacie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nie. Diagnoza AI ma charakter wstępnej weryfikacji i doradztwa. Pomaga kierowcy zrozumieć powagę sytuacji i zorientować się w możliwych awariach, ale ostateczne sprawdzenie mechaniczne i naprawę powinien zawsze wykonać profesjonalny mechanik."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Jak wygenerować raport PDF z diagnostyki auta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Po zakończeniu skanowania pojazdu lub analizy przez AI, aplikacja umożliwia wygenerowanie przejrzystego pliku PDF z historią błędów, parametrami pracy silnika i interpretacją usterki. Możesz go zapisać w telefonie lub wysłać bezpośrednio do swojego mechanika."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy opisywanie objawów własnymi słowami naprawdę działa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak! Silnik AI został przeszkolony na tysiącach opisów awarii samochodowych. Potrafi zinterpretować potoczne określenia, takie jak 'pukanie w prawym kole', 'auto dławi się na zimnym silniku' czy 'niebieski dym z wydechu' i dopasować je do potencjalnych problemów z osprzętem."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy diagnoza AI jest płatna?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aplikacja oferuje darmowe pobranie i wykonanie podstawowych testów diagnostycznych. Zaawansowane funkcje, takie jak rozbudowane diagnozy sztucznej inteligencji czy generowanie szczegółowych raportów PDF, mogą być częścią płatnych pakietów dostępnych bezpośrednio w aplikacji."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-darkBg text-white font-sans antialiased">
+
+<nav class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center gap-3">
+    <a href="/" class="text-xl md:text-2xl font-black tracking-wider flex items-center gap-2" aria-label="Mój Mechanik - strona główna">
+        <i class="fa-solid fa-wrench text-brandRed"></i>
+        <span class="whitespace-nowrap">MÓJ <span class="text-gray-400">MECHANIK</span></span>
+    </a>
+    <div class="flex items-center gap-4 shrink-0">
+        <a href="/check-engine/" class="text-sm text-gray-300 hover:text-white hidden md:inline-block transition-colors">Check Engine</a>
+        <a href="/elm327-bluetooth/" class="text-sm text-gray-300 hover:text-white hidden md:inline-block transition-colors">ELM327</a>
+        <a href="/bledy-dtc/p0420/" class="text-sm text-gray-300 hover:text-white hidden md:inline-block transition-colors">P0420</a>
+        <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL" class="transition-transform hover:scale-105 block" aria-label="Pobierz Mój Mechanik z Google Play">
+            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/pl_badge_web_generic.png" alt="Pobierz z Google Play" class="h-10 md:h-14 w-auto object-contain">
+        </a>
+    </div>
+</nav>
+
+<main class="container mx-auto px-6 py-10 max-w-4xl">
+    <header class="text-center mb-12">
+        <div class="inline-flex items-center gap-2 bg-panelBg text-brandRed font-bold px-3 py-1 rounded-full text-xs tracking-wider mb-6 border border-gray-700">
+            <i class="fa-solid fa-robot"></i>
+            INTELIGENTNE DORADZTWO SERWISOWE
+        </div>
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+            Diagnoza AI usterki auta – <br class="hidden md:inline">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400">raport PDF i opis objawów własnymi słowami</span>
+        </h1>
+        <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
+            Nie rozumiesz technicznych kodów błędów? Opisz problem jak człowiek, a sztuczna inteligencja wyjaśni Ci go prostym językiem.
+        </p>
+    </header>
+
+    <article class="bg-panelBg rounded-3xl p-6 md:p-10 border border-gray-700 shadow-xl mb-12">
+        <p class="text-gray-300 text-lg leading-relaxed mb-6">
+            Tradycyjna diagnostyka OBD2 często kończy się wyświetleniem niezrozumiałych haseł, takich jak <em>„Błąd P0171: System Too Lean”</em>. Zwykły kierowca nie wie, czy może kontynuować podróż, czy powinien natychmiast zatrzymać pojazd. Rozwiązaniem tego problemu jest <strong>diagnoza AI</strong> – system, który tłumaczy kody błędów i objawy na prosty, zrozumiały język.
+        </p>
+
+        <h2 class="text-2xl font-bold text-white mt-8 mb-4 flex items-center gap-3">
+            <i class="fa-solid fa-brain text-brandRed"></i> Jak działa diagnoza AI w aplikacji Mój Mechanik?
+        </h2>
+        <p class="text-gray-400 leading-relaxed mb-6">
+            Sztuczna inteligencja zaimplementowana w naszej aplikacji łączy tradycyjne odczyty OBD2 z analizą językową. Kierowca nie musi ograniczać się tylko do kodów usterek. Może <strong>opisać objawy awarii własnymi słowami</strong> – na przykład: „samochód szarpie przy przyspieszaniu na niskich obrotach i słychać gwizd z pod maski”.
+        </p>
+        <p class="text-gray-400 leading-relaxed mb-6">
+            Algorytm AI analizuje ten opis w powiązaniu z parametrami silnika oraz aktywnymi błędami DTC. Następnie generuje podpowiedzi, wskazując na możliwe usterki (np. nieszczelność rury intercoolera, zużycie świec zapłonowych czy problem z przepływomierzem) oraz podpowiada, jakie powinny być kolejne kroki.
+        </p>
+
+        <h2 class="text-2xl font-bold text-white mt-8 mb-4 flex items-center gap-3">
+            <i class="fa-solid fa-file-pdf text-brandRed"></i> Przejrzysty raport diagnostyczny PDF dla mechanika
+        </h2>
+        <p class="text-gray-400 leading-relaxed mb-4">
+            Po wykonaniu diagnostyki i uzyskaniu opinii AI możesz jednym kliknięciem wygenerować <strong>raport diagnostyczny PDF</strong>. Zawiera on:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-gray-400 mb-8 pl-2">
+            <li>Podstawowe informacje o diagnozowanym pojeździe (wprowadzone ręcznie lub zdekodowane).</li>
+            <li>Listę wykrytych kodów błędów DTC wraz z ich opisami po polsku.</li>
+            <li>Podsumowanie parametrów pracy silnika w czasie rzeczywistym (Live Data).</li>
+            <li>Wskazówki i objaśnienia wygenerowane przez sztuczną inteligencję.</li>
+        </ul>
+        <p class="text-gray-400 leading-relaxed mb-6">
+            Taki dokument możesz zapisać, zachować dla siebie (np. jako dowód stanu technicznego przy sprzedaży auta) lub wysłać bezpośrednio do mechanika przed wizytą w warsztacie.
+        </p>
+
+        <section class="bg-red-950/20 border border-red-500/20 rounded-2xl p-6 mb-8">
+            <h3 class="text-lg font-bold text-red-400 mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-circle-exclamation"></i> Ograniczenia diagnozy AI oraz raportu PDF
+            </h3>
+            <ul class="list-disc list-inside space-y-2 text-gray-400 text-sm">
+                <li>Diagnoza AI opiera się na prawdopodobieństwie i analizie statystycznej najczęstszych awarii. Nie daje 100% pewności i nie stanowi oficjalnej ekspertyzy technicznej.</li>
+                <li>Sztuczna inteligencja opiera się na informacjach podanych przez kierowcę oraz danych pobranych przez interfejs OBD2. Brak stabilnego połączenia lub pominięcie ważnych objawów może wpłynąć na trafność analizy.</li>
+                <li>Aplikacja ma charakter doradczy. Zawsze skonsultuj wyniki diagnostyki z wykwalifikowanym mechanikiem samochodowym przed podjęciem decyzji o wymianie kosztownych części.</li>
+            </ul>
+        </section>
+
+        <h2 class="text-2xl font-bold text-white mt-8 mb-4 flex items-center gap-3">
+            <i class="fa-solid fa-comments text-brandRed"></i> Jak przygotować się do rozmowy w warsztacie?
+        </h2>
+        <p class="text-gray-400 leading-relaxed mb-6">
+            Posiadanie gotowego raportu PDF oraz wstępnej analizy AI zmienia Twoją pozycję w rozmowie z serwisem. Zamiast mówić: „coś stuka i nie jedzie”, możesz przedstawić konkretne kody błędów i parametry. To znacząco skraca czas lokalizacji usterki w warsztacie i minimalizuje ryzyko naciągania na wymianę sprawnych podzespołów.
+        </p>
+
+        <div class="bg-darkBg/50 border border-gray-700 rounded-3xl p-8 text-center mt-10">
+            <h3 class="text-2xl font-bold text-white mb-4">Opisz objawy i wygeneruj raport PDF</h3>
+            <p class="text-gray-400 mb-6 max-w-lg mx-auto">
+                Pobierz aplikację Mój Mechanik, opisz usterkę własnymi słowami i stwórz profesjonalny dokument dla swojego mechanika.
+            </p>
+            <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL" class="inline-flex bg-brandRed hover:bg-brandRedHover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-red-500/20 items-center justify-center gap-3" id="btn-download-playstore">
+                <i class="fa-brands fa-google-play"></i>
+                Pobierz z Google Play
+            </a>
+        </div>
+    </article>
+
+    <section class="mb-12">
+        <h2 class="text-3xl font-bold text-white text-center mb-8">Często Zadawane Pytania (FAQ)</h2>
+        <div class="space-y-4">
+            <div class="bg-panelBg border border-gray-700 rounded-2xl p-5 cursor-pointer hover:border-gray-600 faq-item">
+                <div class="flex justify-between items-center font-bold text-white text-lg">
+                    <span>Jak działa sztuczna inteligencja w diagnostyce samochodowej?</span>
+                    <i class="fa-solid fa-plus text-brandRed faq-icon"></i>
+                </div>
+                <div class="text-gray-400 mt-3 hidden faq-answer">
+                    Sztuczna inteligencja w aplikacji Mój Mechanik przetwarza wprowadzony przez Ciebie tekst (objawy usterki) oraz łączy go z odczytanymi z pojazdu błędami DTC. Dzięki temu potrafi powiązać np. spadek mocy i 'gwizd' z nieszczelnością dolotu lub uszkodzeniem turbosprężarki, podając najbardziej prawdopodobną diagnozę.
+                </div>
+            </div>
+            <div class="bg-panelBg border border-gray-700 rounded-2xl p-5 cursor-pointer hover:border-gray-600 faq-item">
+                <div class="flex justify-between items-center font-bold text-white text-lg">
+                    <span>Czy diagnoza AI zastępuje profesjonalne badanie w warsztacie?</span>
+                    <i class="fa-solid fa-plus text-brandRed faq-icon"></i>
+                </div>
+                <div class="text-gray-400 mt-3 hidden faq-answer">
+                    Nie. Sztuczna inteligencja dostarcza wstępnych wskazówek i tłumaczy techniczne kody błędów na prosty język. Fizyczne badanie zawieszenia, pomiar kompresji silnika czy weryfikacja okablowania zawsze wymagają doświadczonego oka mechanika.
+                </div>
+            </div>
+            <div class="bg-panelBg border border-gray-700 rounded-2xl p-5 cursor-pointer hover:border-gray-600 faq-item">
+                <div class="flex justify-between items-center font-bold text-white text-lg">
+                    <span>Jak wygenerować raport PDF z diagnostyki auta?</span>
+                    <i class="fa-solid fa-plus text-brandRed faq-icon"></i>
+                </div>
+                <div class="text-gray-400 mt-3 hidden faq-answer">
+                    Po zakończeniu odczytu błędów lub przeprowadzeniu analizy AI w aplikacji, kliknij przycisk 'Generuj Raport'. Aplikacja automatycznie utworzy dokument PDF, który możesz zapisać na telefonie, wydrukować lub wysłać mailem/komunikatorem bezpośrednio do mechanika.
+                </div>
+            </div>
+            <div class="bg-panelBg border border-gray-700 rounded-2xl p-5 cursor-pointer hover:border-gray-600 faq-item">
+                <div class="flex justify-between items-center font-bold text-white text-lg">
+                    <span>Czy opisywanie objawów własnymi słowami naprawdę działa?</span>
+                    <i class="fa-solid fa-plus text-brandRed faq-icon"></i>
+                </div>
+                <div class="text-gray-400 mt-3 hidden faq-answer">
+                    Tak. Nasz system AI został przeszkolony na bazie tysięcy przypadków serwisowych i terminologii motoryzacyjnej. Rozpoznaje potoczne określenia dotyczące dźwięków (np. pukanie, szum, pisk), zapachów (np. spalenizna) czy zachowania auta (np. szarpanie, dławienie, ściąganie).
+                </div>
+            </div>
+            <div class="bg-panelBg border border-gray-700 rounded-2xl p-5 cursor-pointer hover:border-gray-600 faq-item">
+                <div class="flex justify-between items-center font-bold text-white text-lg">
+                    <span>Czy diagnoza AI jest płatna?</span>
+                    <i class="fa-solid fa-plus text-brandRed faq-icon"></i>
+                </div>
+                <div class="text-gray-400 mt-3 hidden faq-answer">
+                    Pobranie aplikacji Mój Mechanik oraz podstawowy odczyt kodów błędów OBD2 są bezpłatne. Zaawansowane analizy generowane przez sztuczną inteligencję oraz tworzenie eksportów do plików PDF mogą wymagać wykupienia pakietu premium w aplikacji.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-panelBg/50 border border-gray-800 rounded-3xl p-6">
+        <h4 class="text-brandRed font-bold mb-4 text-sm uppercase tracking-wider">Przydatne linki wewnętrzne:</h4>
+        <div class="flex flex-wrap gap-3">
+            <a href="/diagnostyka-obd2-przez-telefon/" class="bg-panelBg border border-gray-700 rounded-xl px-4 py-2 text-sm text-gray-300 hover:border-brandRed hover:text-white transition">Diagnostyka OBD2 przez telefon</a>
+            <a href="/sprawdzanie-vin-przed-zakupem-auta/" class="bg-panelBg border border-gray-700 rounded-xl px-4 py-2 text-sm text-gray-300 hover:border-brandRed hover:text-white transition">Sprawdzanie VIN przed zakupem auta</a>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-darkBg py-8 border-t border-gray-800 text-center text-sm text-gray-500">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p>&copy; 2026 Mój Mechanik. Wszelkie prawa zastrzeżone.</p>
+        <div class="flex gap-6 flex-wrap justify-center">
+            <a href="/#data-deletion" class="hover:text-white transition-colors">Usuwanie danych</a>
+            <a href="/check-engine/" class="hover:text-white transition-colors">Check Engine</a>
+            <a href="/elm327-bluetooth/" class="hover:text-white transition-colors">ELM327</a>
+            <a href="/bledy-dtc/p0420/" class="hover:text-white transition-colors">P0420</a>
+            <a href="/polityka.html" class="hover:text-white transition-colors">Polityka Prywatności</a>
+            <a href="mailto:delma1212@gmail.com" class="hover:text-white transition-colors">Kontakt</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const answer = item.querySelector('.faq-answer');
+            const icon = item.querySelector('.faq-icon');
+            answer.classList.toggle('hidden');
+            if (answer.classList.contains('hidden')) {
+                icon.classList.remove('fa-minus');
+                icon.classList.add('fa-plus');
+            } else {
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+            }
+        });
+    });
+</script>
+</body>
+</html>
