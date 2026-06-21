@@ -176,6 +176,29 @@ article p:first-of-type {
   background: var(--brand-dark);
 }
 
+.google-play-button {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  background: #16a34a;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(22, 163, 74, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.google-play-button:hover {
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(22, 163, 74, 0.32);
+}
+
+.google-play-button:visited {
+  color: #ffffff;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -224,5 +247,13 @@ article p:first-of-type {
 
   .side-card {
     position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .google-play-button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
