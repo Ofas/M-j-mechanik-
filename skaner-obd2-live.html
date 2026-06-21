@@ -55,7 +55,7 @@
             <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">Skaner OBD2 live</h1>
             <p class="text-gray-300 text-lg md:text-xl mb-8 max-w-3xl leading-relaxed">Funkcja Skaner OBD2 live w aplikacji Mój Mechanik pomaga sprawdzić podstawowe dane samochodu w czasie rzeczywistym po połączeniu z adapterem OBD2 Bluetooth. To szybki sposób, żeby zobaczyć, co dzieje się z autem przed wizytą w warsztacie.</p>
             <div class="flex flex-col sm:flex-row gap-4">
-                <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL" class="bg-brandRed hover:bg-brandRedHover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-red-500/20 flex items-center justify-center gap-3">
+                <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL&utm_source=website&utm_medium=article&utm_campaign=skaner_obd2_live" class="bg-brandRed hover:bg-brandRedHover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-red-500/20 flex items-center justify-center gap-3">
                     <i class="fa-brands fa-google-play text-xl"></i>
                     Pobierz z Google Play
                 </a>
@@ -105,7 +105,7 @@
         <div class="container mx-auto px-6 max-w-4xl">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Sprawdź auto z aplikacją Mój Mechanik</h2>
             <p class="text-gray-400 text-lg mb-8">Diagnostyka OBD2, błędy DTC, dekoder VIN i raport AI PDF w jednym miejscu.</p>
-            <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL" class="inline-flex bg-brandRed hover:bg-brandRedHover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-red-500/20 items-center justify-center gap-3">
+            <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL&utm_source=website&utm_medium=article&utm_campaign=skaner_obd2_live" class="inline-flex bg-brandRed hover:bg-brandRedHover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-red-500/20 items-center justify-center gap-3">
                 <i class="fa-brands fa-google-play text-xl"></i>
                 Pobierz aplikację
             </a>
@@ -117,7 +117,7 @@
     <div class="container mx-auto px-6 max-w-4xl">
         <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-4">Masz Check Engine? Sprawdź błąd w telefonie.</h2>
         <p class="text-white/90 text-lg mb-6">Pobierz Mój Mechanik z Google Play.</p>
-        <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL" class="inline-flex bg-white text-brandRed hover:bg-gray-100 px-8 py-4 rounded-xl font-bold text-lg transition-all items-center justify-center gap-3"><i class="fa-brands fa-google-play text-xl"></i>Pobierz Mój Mechanik z Google Play</a>
+        <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL&utm_source=website&utm_medium=article&utm_campaign=skaner_obd2_live" class="inline-flex bg-white text-brandRed hover:bg-gray-100 px-8 py-4 rounded-xl font-bold text-lg transition-all items-center justify-center gap-3"><i class="fa-brands fa-google-play text-xl"></i>Pobierz Mój Mechanik z Google Play</a>
     </div>
 </section>
 <footer class="bg-darkBg py-8 border-t border-gray-800 text-center text-sm text-gray-500">
@@ -131,5 +131,25 @@
         </div>
     </footer>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('a[href*="play.google.com/store/apps/details"]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (typeof gtag === 'function') {
+        var url = new URL(link.href);
+        gtag('event', 'click_google_play', {
+          link_url: link.href,
+          link_id: link.id || 'no_id',
+          page_path: window.location.pathname,
+          utm_source: url.searchParams.get('utm_source') || 'none',
+          utm_medium: url.searchParams.get('utm_medium') || 'none',
+          utm_campaign: url.searchParams.get('utm_campaign') || 'none'
+        });
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>
