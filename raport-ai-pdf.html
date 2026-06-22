@@ -140,6 +140,9 @@ document.addEventListener('DOMContentLoaded', function () {
       if (typeof gtag === 'function') {
         var url = new URL(link.href);
         gtag('event', 'click_google_play', {
+          event_category: 'outbound',
+          event_label: 'google_play',
+          transport_type: 'beacon',
           link_url: link.href,
           link_id: link.id || 'no_id',
           page_path: window.location.pathname,
