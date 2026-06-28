@@ -196,7 +196,7 @@
         }
     </style>
 </head>
-<body class="bg-darkBg text-slate-100 font-sans antialiased min-h-screen">
+<body class="bg-darkBg text-slate-100 font-sans antialiased min-h-screen overflow-x-hidden">
 
     <!-- Top Navigation -->
     <nav class="sticky top-0 z-50 w-full border-b border-slate-800/80 bg-darkBg/85 backdrop-blur-md">
@@ -241,8 +241,8 @@
                 </ol>
             </nav>
 
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-7/12 text-center lg:text-left">
+            <div class="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
+                <div class="w-full lg:w-7/12 text-center lg:text-left">
                     <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold tracking-wider mb-6 bg-slate-900 border border-slate-700/60 text-brandRed">
                         <i class="fa-solid fa-circle-exclamation"></i>
                         KOD BŁĘDU OBD2: P0194
@@ -263,12 +263,12 @@
                         </div>
                     </div>
 
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&utm_source=website&utm_medium=hero&utm_campaign=dtc_p0194" class="bg-brandRed hover:bg-brandRedHover text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition-all transform hover:scale-[1.02] shadow-lg shadow-red-500/20 flex items-center justify-center gap-3">
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mt-8">
+                        <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&gl=PL&utm_source=website&utm_medium=hero&utm_campaign=dtc_p0194" class="bg-brandRed hover:bg-brandRedHover text-white px-6 py-3.5 rounded-xl font-bold text-base transition-all transform hover:scale-[1.02] shadow-lg shadow-red-500/20 flex items-center justify-center gap-3">
                             <i class="fa-brands fa-google-play text-xl"></i>
                             Diagnozuj ten błąd z AI
                         </a>
-                        <a href="#diagnostyka" class="border border-slate-700 hover:border-brandRed text-slate-200 hover:text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition-all flex items-center justify-center gap-2 bg-slate-900/40 backdrop-blur-sm">
+                        <a href="#diagnostyka" class="border border-slate-700 hover:border-brandRed text-slate-200 hover:text-white px-6 py-3.5 rounded-xl font-bold text-base transition-all flex items-center justify-center gap-2 bg-slate-900/40 backdrop-blur-sm">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             Jak sprawdzić usterkę?
                         </a>
@@ -276,11 +276,11 @@
                 </div>
 
                 <!-- Real App Screenshot -->
-                <div class="lg:w-5/12 flex justify-center w-full mt-8 lg:mt-0">
+                <div class="w-full lg:w-5/12 flex justify-center mt-6 lg:mt-0">
                     <img
                         src="/assets/screny/01_diagnostyka_auta_telefon_1080x1920.webp"
                         alt="Aplikacja Mój Mechanik – diagnostyka OBD2 na telefonie Android"
-                        class="w-48 sm:w-56 md:w-64 lg:w-72 rounded-3xl shadow-2xl border-4 border-slate-800 object-cover"
+                        class="w-40 sm:w-48 md:w-56 lg:w-64 rounded-3xl shadow-2xl border-4 border-slate-800 object-cover flex-shrink-0"
                         loading="lazy"
                         width="400" height="800"
                     >
@@ -291,10 +291,10 @@
 
     <!-- Main Content Area -->
     <main class="container mx-auto px-4 sm:px-6 py-12">
-        <div class="grid lg:grid-cols-3 gap-8">
+        <div class="grid lg:grid-cols-3 gap-6 lg:gap-8 items-start">
             
             <!-- Left & Middle: Article Content -->
-            <div class="lg:col-span-2 space-y-8">
+            <div class="lg:col-span-2 space-y-6 min-w-0 overflow-hidden">
                 
                 <!-- Quick Answer (GEO / AI SEO Ready) -->
                 <section class="glass-card rounded-3xl p-6 md:p-8">
@@ -313,7 +313,7 @@
                 </section>
 
                 <!-- Detailed Analysis: Symptoms & Causes -->
-                <section class="grid md:grid-cols-2 gap-6">
+                <section class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
                     <!-- Symptoms -->
                     <div class="glass-card rounded-3xl p-6 border border-slate-800">
                         <h3 class="font-heading text-xl font-bold mb-4 text-white flex items-center gap-2">
@@ -387,8 +387,8 @@
                         Ile kosztuje naprawa usterki powiązanej z P0194?
                     </h2>
                     <p class="text-slate-300 text-sm mb-6">Koszty naprawy zależą od tego, który element uległ uszkodzeniu. Poniżej przedstawiamy orientacyjne ceny części i robocizny w polskich warsztatach:</p>
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-left text-sm text-slate-300">
+                    <div class="overflow-x-auto -mx-2 px-2 max-w-full">
+                        <table class="w-full min-w-[480px] text-left text-sm text-slate-300">
                             <thead class="bg-slate-900 text-slate-200 uppercase text-xs">
                                 <tr>
                                     <th class="px-6 py-3 rounded-l-lg">Potencjalna Część</th>
@@ -397,7 +397,7 @@
                                     <th class="px-6 py-3 rounded-r-lg">Suma</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y divide-slate-800">
+                            <tbody class="divide-y divide-slate-800 text-xs sm:text-sm">
                                 <tr>
             <td class="px-6 py-4 font-medium text-white">Diagnostyka komputerowa OBD2</td>
             <td class="px-6 py-4">0 zł (z aplikacją Mój Mechanik)</td>
@@ -442,7 +442,7 @@
             </div>
             
             <!-- Right Column: Sidebar (Conversion Panel) -->
-            <div class="space-y-6">
+            <div class="space-y-4 lg:space-y-6">
                 
                 <!-- Main Conversion Card -->
                 <div class="glass-card rounded-3xl p-6 border border-slate-800/80 glow-red">
@@ -467,8 +467,8 @@
                 </div>
 
                 <!-- Related DTC Codes (Internal Linking) -->
-                <div class="glass-card rounded-3xl p-6 border border-slate-800">
-                    <h3 class="font-heading text-lg font-bold mb-4 text-white">Inne kody z tej grupy</h3>
+                <div class="glass-card rounded-2xl p-5 border border-slate-800">
+                    <h3 class="font-heading text-base font-bold mb-3 text-white">Inne kody z tej grupy</h3>
                     <div class="grid grid-cols-2 gap-2 text-xs text-slate-300">
                         <a href="/bledy-dtc/p0171/" class="bg-slate-900 border border-slate-800/80 rounded-xl p-3 hover:border-brandRed hover:text-white transition-colors text-center block font-mono font-bold">P0171</a>
 <a href="/bledy-dtc/p0100/" class="bg-slate-900 border border-slate-800/80 rounded-xl p-3 hover:border-brandRed hover:text-white transition-colors text-center block font-mono font-bold">P0100</a>
