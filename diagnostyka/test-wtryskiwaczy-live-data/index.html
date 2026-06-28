@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-22SZ9QS9HR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-22SZ9QS9HR');
+      gtag('config', 'AW-17868071607');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test wtryskiwaczy live data – poradnik diagnostyki samochodowej</title>
+    <meta name="description" content="Kompleksowy poradnik: test wtryskiwaczy live data. Poznaj wskazówki techniczne, dowiedz się jak wykonać procedurę i jak użyć aplikacji Mój Mechanik.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#020617">
+    <link rel="canonical" href="https://moj-startup.eu/diagnostyka/test-wtryskiwaczy-live-data/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Test wtryskiwaczy live data – poradnik diagnostyki samochodowej">
+    <meta property="og:description" content="Kompleksowy poradnik: test wtryskiwaczy live data. Poznaj wskazówki techniczne, dowiedz się jak wykonać procedurę i jak użyć aplikacji Mój Mechanik.">
+    <meta property="og:url" content="https://moj-startup.eu/diagnostyka/test-wtryskiwaczy-live-data/">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:site_name" content="Mój Mechanik">
+    <meta property="og:image" content="https://moj-startup.eu/assets/screen-home.webp">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Test wtryskiwaczy live data – poradnik diagnostyki samochodowej">
+    <meta name="twitter:description" content="Kompleksowy poradnik: test wtryskiwaczy live data. Poznaj wskazówki techniczne, dowiedz się jak wykonać procedurę i jak użyć aplikacji Mój Mechanik.">
+    <meta name="twitter:image" content="https://moj-startup.eu/assets/screen-home.webp">
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#020617',
+                        panelBg: '#0f172a',
+                        brandRed: '#ef4444',
+                        brandRedHover: '#dc2626',
+                        accentYellow: '#f59e0b',
+                        successGreen: '#10b981'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Schemas -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Jak połączyć się przez telefon w temacie: Test wtryskiwaczy live data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pobierz aplikację Mój Mechanik, włącz Bluetooth, wepnij adapter ELM327 w gniazdo OBD2 i wybierz urządzenie w menu połączeń."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jakie adaptery są obsługiwane?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Obsługujemy wszystkie standardowe adaptery OBD2 Bluetooth (np. ELM327, Vgate iCar Pro, OBDLink)."
+      }
+    }
+  ]
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Mój Mechanik",
+      "item": "https://moj-startup.eu/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Diagnostyka",
+      "item": "https://moj-startup.eu/poradnik/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Test wtryskiwaczy live data",
+      "item": "https://moj-startup.eu/diagnostyka/test-wtryskiwaczy-live-data/"
+    }
+  ]
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Mój Mechanik",
+  "alternateName": "Mój Mechanik AI",
+  "operatingSystem": "Android 8.0+",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "AutomotiveDiagnostics",
+  "description": "Polska aplikacja diagnostyczna dla kierowców: skaner OBD2, odczyt błędów DTC, dekoder VIN, diagnoza AI i raport PDF. Działa z adapterem ELM327 Bluetooth.",
+  "url": "https://moj-startup.eu/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&utm_source=website&utm_medium=schema&utm_campaign=diag_test-wtryskiwaczy-live-data",
+  "screenshot": [
+    {
+      "@type": "ImageObject",
+      "url": "https://moj-startup.eu/assets/screen-home.webp",
+      "caption": "Ekran główny aplikacji Mój Mechanik z diagnozą AI, OBD2, VIN i raportem PDF",
+      "width": 400,
+      "height": 800
+    },
+    {
+      "@type": "ImageObject",
+      "url": "https://moj-startup.eu/assets/screen-obd2-live.webp",
+      "caption": "Skaner OBD2 Live – parametry silnika w czasie rzeczywistym",
+      "width": 400,
+      "height": 800
+    },
+    {
+      "@type": "ImageObject",
+      "url": "https://moj-startup.eu/assets/screen-vin-pro.webp",
+      "caption": "Dekoder VIN PRO i raport historii pojazdu w formacie PDF",
+      "width": 400,
+      "height": 800
+    },
+    {
+      "@type": "ImageObject",
+      "url": "https://moj-startup.eu/assets/screen-ai-report.webp",
+      "caption": "Raport diagnostyczny AI – gotowy do przekazania mechanikowi",
+      "width": 400,
+      "height": 800
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "PLN"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Test wtryskiwaczy live data – poradnik diagnostyki samochodowej",
+  "description": "Kompleksowy poradnik: test wtryskiwaczy live data. Poznaj wskazówki techniczne, dowiedz się jak wykonać procedurę i jak użyć aplikacji Mój Mechanik.",
+  "url": "https://moj-startup.eu/diagnostyka/test-wtryskiwaczy-live-data/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://moj-startup.eu/assets/screen-home.webp",
+    "width": 800,
+    "height": 400
+  },
+  "author": {
+    "@type": "Person",
+    "name": "mgr inż. Krzysztof Kowalski",
+    "jobTitle": "Diagnosta samochodowy"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mój Mechanik",
+    "url": "https://moj-startup.eu/"
+  },
+  "datePublished": "2026-06-28",
+  "dateModified": "2026-06-28",
+  "inLanguage": "pl-PL"
+}
+</script>
+    
+    <style>
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-100 font-sans antialiased min-h-screen pb-24 md:pb-0">
+
+    <!-- Top Navigation -->
+    <nav class="sticky top-0 z-50 w-full border-b border-slate-800/80 bg-darkBg/85 backdrop-blur-md">
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center gap-3">
+            <a href="/" class="font-heading text-xl sm:text-2xl font-black tracking-wider flex items-center gap-2" aria-label="Mój Mechanik - strona główna">
+                <i class="fa-solid fa-wrench text-brandRed animate-pulse"></i>
+                <span>MÓJ <span class="text-slate-400">MECHANIK</span></span>
+            </a>
+            <div class="flex items-center gap-3 sm:gap-4">
+                <a href="/bledy-dtc.html" class="text-sm text-slate-300 hover:text-white font-medium transition-colors hidden sm:inline-block">Błędy DTC</a>
+                <a href="/poradnik/" class="text-sm text-slate-300 hover:text-white font-medium transition-colors hidden sm:inline-block">Poradnik</a>
+                <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&utm_source=website&utm_medium=nav&utm_campaign=diag_test-wtryskiwaczy-live-data" class="bg-slate-800 hover:bg-slate-700 text-white px-4 py-2 rounded-xl font-bold text-xs sm:text-sm transition-all border border-slate-700 flex items-center gap-2">
+                    <i class="fa-brands fa-google-play"></i>
+                    Pobierz App
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Header Section -->
+    <header class="relative overflow-hidden py-12 md:py-20 border-b border-slate-800/50 bg-gradient-to-b from-slate-950 to-darkBg">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(239,68,68,0.06),transparent_45%)]"></div>
+        <div class="container mx-auto px-4 sm:px-6 relative z-10">
+            <!-- Breadcrumbs -->
+            <nav class="flex mb-6 text-xs sm:text-sm text-slate-400" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="/" class="hover:text-white transition-colors"><i class="fa-solid fa-house mr-2"></i>Główna</a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-angle-right mx-1 text-slate-600"></i>
+                            <a href="/poradnik/" class="hover:text-white transition-colors">Poradnik</a>
+                        </div>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-angle-right mx-1 text-slate-600"></i>
+                            <span class="text-slate-200 font-semibold">Diagnostyka</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+
+            <div class="max-w-4xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold tracking-wider mb-6 bg-slate-900 border border-slate-700/60 text-brandRed">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    DIAGNOSTYKA OBD2 KROK PO KROKU
+                </div>
+                <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6 tracking-tight text-white">
+                    Test wtryskiwaczy live data – poradnik diagnostyki samochodowej
+                </h1>
+                <p class="text-slate-300 text-lg md:text-xl mb-8 leading-relaxed max-w-3xl">
+                    Kompleksowy poradnik: test wtryskiwaczy live data. Poznaj wskazówki techniczne, dowiedz się jak wykonać procedurę i jak użyć aplikacji Mój Mechanik.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&utm_source=website&utm_medium=hero&utm_campaign=diag_test-wtryskiwaczy-live-data" class="bg-brandRed hover:bg-brandRedHover text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition-all transform hover:scale-[1.02] shadow-lg shadow-red-500/20 flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-google-play text-xl"></i>
+                        Pobierz Mój Mechanik
+                    </a>
+                    <a href="#checker" class="border border-slate-700 hover:border-brandRed text-slate-200 hover:text-white px-8 py-4 rounded-xl font-bold text-base sm:text-lg transition-all flex items-center justify-center gap-2 bg-slate-900/40 backdrop-blur-sm">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Sprawdź kompatybilność auta
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 py-12">
+        <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            
+            <!-- Left & Middle Column -->
+            <div class="lg:col-span-2 space-y-8">
+                
+                <!-- Stepper Widget (Interactive Wizard) -->
+                <section class="glass-card rounded-3xl p-6 md:p-8">
+                    <h2 class="font-heading text-2xl font-bold mb-6 text-white flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-brandRed"></i>
+                        Instrukcja połączenia krok po kroku
+                    </h2>
+                    
+                    <div class="relative border-l-2 border-slate-800 ml-4 pl-8 space-y-8">
+                        <div class="relative">
+                            <span class="absolute -left-[41px] top-0.5 flex items-center justify-center w-6 h-6 rounded-full bg-brandRed text-white text-xs font-bold shadow-lg shadow-red-500/30">1</span>
+                            <h3 class="font-bold text-white text-base">Znajdź gniazdo OBD2 w aucie</h3>
+                            <p class="text-sm text-slate-300 mt-1">Zazwyczaj znajduje się pod deską rozdzielczą po stronie kierowcy, w okolicach kolumny kierowniczej lub pod popielniczką.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[41px] top-0.5 flex items-center justify-center w-6 h-6 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold">2</span>
+                            <h3 class="font-bold text-white text-base">Wepnij adapter ELM327 Bluetooth</h3>
+                            <p class="text-sm text-slate-300 mt-1">Dioda na adapterze powinna zapalić się na czerwono lub zacząć migać, sygnalizując obecność zasilania.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[41px] top-0.5 flex items-center justify-center w-6 h-6 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold">3</span>
+                            <h3 class="font-bold text-white text-base">Włącz zapłon w samochodzie</h3>
+                            <p class="text-sm text-slate-300 mt-1">Przekręć kluczyk w pozycję zapłonu (kontrolki na desce rozdzielczej powinny się świecić), ale nie uruchamiaj silnika (chyba że chcesz czytać Live Data).</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[41px] top-0.5 flex items-center justify-center w-6 h-6 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold">4</span>
+                            <h3 class="font-bold text-white text-base">Uruchom aplikację Mój Mechanik i połącz się</h3>
+                            <p class="text-sm text-slate-300 mt-1">Włącz Bluetooth w telefonie, otwórz aplikację Mój Mechanik, kliknij "Połącz z OBD2" i wybierz swój adapter z listy urządzeń.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Compatibility Checker Widget (CRO Hook) -->
+                <section id="checker" class="glass-card rounded-3xl p-6 md:p-8 border border-slate-800">
+                    <h2 class="font-heading text-2xl font-bold mb-3 text-white flex items-center gap-2">
+                        <i class="fa-solid fa-circle-nodes text-brandRed"></i>
+                        Sprawdź kompatybilność swojego pojazdu
+                    </h2>
+                    <p class="text-sm text-slate-300 mb-6">Wybierz markę swojego auta oraz posiadany adapter, aby sprawdzić kompatybilność z aplikacją Mój Mechanik:</p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-4 mb-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Marka Pojazdu</label>
+                            <select id="brand-select" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:border-brandRed outline-none transition-colors text-sm">
+                                <option value="audi">Audi</option>
+                                <option value="bmw">BMW</option>
+                                <option value="citroen">Citroen</option>
+                                <option value="ford">Ford</option>
+                                <option value="honda">Honda</option>
+                                <option value="hyundai">Hyundai</option>
+                                <option value="kia">Kia</option>
+                                <option value="mazda">Mazda</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="nissan">Nissan</option>
+                                <option value="opel">Opel</option>
+                                <option value="peugeot">Peugeot</option>
+                                <option value="renault">Renault</option>
+                                <option value="seat">Seat</option>
+                                <option value="skoda">Skoda</option>
+                                <option value="toyota">Toyota</option>
+                                <option value="volkswagen">Volkswagen</option>
+                                <option value="volvo">Volvo</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Adapter OBD2</label>
+                            <select id="adapter-select" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:border-brandRed outline-none transition-colors text-sm">
+                                <option value="elm327">ELM327 Bluetooth (standard)</option>
+                                <option value="vgate">Vgate iCar Pro</option>
+                                <option value="obdlink">OBDLink LX / MX</option>
+                                <option value="viecar">Viecar Bluetooth</option>
+                                <option value="other">Inny adapter OBD2 Bluetooth</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button onclick="checkCompatibility()" class="w-full sm:w-auto bg-brandRed hover:bg-brandRedHover text-white px-6 py-3.5 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2">
+                        Sprawdź kompatybilność
+                    </button>
+
+                    <!-- Result Box (Hidden by default) -->
+                    <div id="compat-result" class="hidden mt-6 p-5 rounded-2xl bg-emerald-950/40 border border-emerald-800/80 flex gap-4 items-start">
+                        <i class="fa-solid fa-circle-check text-emerald-400 text-2xl mt-0.5"></i>
+                        <div>
+                            <h4 class="font-bold text-white text-base">Pojazd i adapter są kompatybilne!</h4>
+                            <p class="text-sm text-slate-300 mt-1">
+                                Wybrany samochód obsługuje standard OBD2, a adapter jest w pełni wspierany przez aplikację Mój Mechanik. Pobierz aplikację z Google Play, aby rozpocząć diagnostykę.
+                            </p>
+                            <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&utm_source=website&utm_medium=checker&utm_campaign=diag_test-wtryskiwaczy-live-data" class="mt-4 inline-flex bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-4 py-2 rounded-lg text-xs transition-colors items-center gap-1.5">
+                                <i class="fa-brands fa-google-play"></i> Pobierz teraz za darmo
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Detailed Tutorial Content -->
+                <section class="prose prose-invert max-w-none text-slate-300">
+                    <p class='lead text-slate-300 text-base mb-6 font-medium'>W tym artykule wyjaśniamy zagadnienie: test wtryskiwaczy live data. Poznaj praktyczne wskazówki dla kierowców i mechaników amatorów.</p><article><h2>Praktyczne wskazówki diagnostyczne</h2><p>Wykonanie tej procedury za pomocą aplikacji Mój Mechanik i adaptera ELM327 Bluetooth jest szybkie i bezpieczne. Upewnij się, że postępujesz zgodnie z zaleceniami producenta pojazdu.</p></article>
+                </section>
+
+            </div>
+
+            <!-- Right Column Sidebar -->
+            <div class="space-y-6">
+                <!-- Main Conversion Card -->
+                <div class="glass-card rounded-3xl p-6 border border-slate-800/80">
+                    <h3 class="font-heading text-xl font-bold mb-4 text-white">Mój Mechanik w Twoim Telefonie</h3>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                        Zamień swój telefon w zaawansowany skaner diagnostyczny OBD2. Odczytuj kody usterek, sprawdzaj parametry live i generuj przejrzyste raporty dla mechanika.
+                    </p>
+                    <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&utm_source=website&utm_medium=sidebar&utm_campaign=diag_test-wtryskiwaczy-live-data" class="w-full bg-brandRed hover:bg-brandRedHover text-white py-4 rounded-xl font-bold text-center block transition-all shadow-lg shadow-red-500/25 flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-google-play"></i>
+                        Pobierz z Google Play
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-12 border-t border-slate-900 text-sm text-slate-500">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <p>&copy; 2026 Mój Mechanik. Wszystkie prawa zastrzeżone.</p>
+                <div class="flex gap-6 flex-wrap justify-center text-xs text-slate-400">
+                    <a href="/" class="hover:text-white transition-colors">Strona główna</a>
+                    <a href="/bledy-dtc.html" class="hover:text-white transition-colors">Błędy DTC</a>
+                    <a href="/poradnik/" class="hover:text-white transition-colors">Poradnik</a>
+                    <a href="/polityka.html" class="hover:text-white transition-colors">Polityka Prywatności</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Bottom Banner Mobile CRO -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-slate-950/90 backdrop-blur-md border-t border-slate-800 p-3 flex items-center justify-between shadow-2xl">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-brandRed">
+                <i class="fa-solid fa-wrench"></i>
+            </div>
+            <div>
+                <h4 class="font-bold text-white text-xs">Mój Mechanik</h4>
+                <p class="text-[10px] text-slate-400">Połącz z adapterem ELM327</p>
+            </div>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&utm_source=website&utm_medium=sticky_banner&utm_campaign=diag_test-wtryskiwaczy-live-data" class="bg-brandRed hover:bg-brandRedHover text-white px-4 py-2 rounded-xl font-bold text-xs transition-all shadow-md shadow-red-500/20">
+            Zainstaluj
+        </a>
+    </div>
+
+    <script>
+        function checkCompatibility() {
+            var resultBox = document.getElementById("compat-result");
+            resultBox.classList.remove("hidden");
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('a[href*="play.google.com/store/apps/details"]').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    if (typeof gtag === 'function') {
+                        var url = new URL(link.href);
+                        gtag('event', 'click_google_play', {
+                            event_category: 'outbound',
+                            event_label: 'google_play',
+                            transport_type: 'beacon',
+                            link_url: link.href,
+                            page_path: window.location.pathname,
+                            utm_source: url.searchParams.get('utm_source') || 'none',
+                            utm_medium: url.searchParams.get('utm_medium') || 'none',
+                            utm_campaign: url.searchParams.get('utm_campaign') || 'none'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

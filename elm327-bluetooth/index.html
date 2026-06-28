@@ -13,48 +13,170 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adapter ELM327 Bluetooth – jak podłączyć skaner OBD2 do telefonu?</title>
-    <meta name="description" content="Poradnik adaptera ELM327 Bluetooth: jak działa skaner OBD2, gdzie jest gniazdo diagnostyczne, jak połączyć adapter z telefonem i co zrobić, gdy nie łączy się z autem.">
+    <title>ELM327 Bluetooth: Jak Podłączyć Skaner OBD2 do Telefonu? [Krok po Kroku]</title>
+    <meta name="description" content="Pełny poradnik adaptera ELM327 Bluetooth: podłączenie do auta, parowanie z telefonem Android, rozwiązywanie problemów z połączeniem i wybór najlepszego skanera OBD2.">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0f172a">
+    <meta name="theme-color" content="#020617">
     <link rel="canonical" href="https://moj-startup.eu/elm327-bluetooth/">
+    <!-- Open Graph -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Adapter ELM327 Bluetooth – jak podłączyć skaner OBD2 do telefonu?">
-    <meta property="og:description" content="Poradnik adaptera ELM327 Bluetooth: jak działa skaner OBD2, gdzie jest gniazdo diagnostyczne, jak połączyć adapter z telefonem i co zrobić, gdy nie łączy się z autem.">
+    <meta property="og:title" content="ELM327 Bluetooth: Jak Podłączyć Skaner OBD2 do Telefonu? [Krok po Kroku]">
+    <meta property="og:description" content="Pełny poradnik adaptera ELM327 Bluetooth: podłączenie do auta, parowanie z telefonem Android, rozwiązywanie problemów z połączeniem i wybór najlepszego skanera OBD2.">
     <meta property="og:url" content="https://moj-startup.eu/elm327-bluetooth/">
     <meta property="og:locale" content="pl_PL">
+    <meta property="og:site_name" content="Mój Mechanik">
+    <meta property="og:image" content="https://moj-startup.eu/assets/screen-obd2-live.webp">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <meta property="og:image:alt" content="ELM327 Bluetooth: Jak Podłączyć Skaner OBD2 do Telefonu? [Krok po Kroku]">
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ELM327 Bluetooth – Poradnik Podłączenia OBD2 do Telefonu">
+    <meta name="twitter:description" content="Jak połączyć adapter ELM327 z telefonem? Sprawdź instrukcję krok po kroku i odczytaj błędy silnika aplikacją Mój Mechanik.">
+    <meta name="twitter:image" content="https://moj-startup.eu/assets/screen-obd2-live.webp">
+    <meta name="twitter:image:alt" content="ELM327 Bluetooth: Jak Podłączyć Skaner OBD2 do Telefonu? [Krok po Kroku]">
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Mój Mechanik",
+  "alternateName": "Mój Mechanik AI",
+  "operatingSystem": "Android 8.0+",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "AutomotiveDiagnostics",
+  "description": "Polska aplikacja diagnostyczna dla kierowców: skaner OBD2, odczyt błędów DTC, dekoder VIN, diagnoza AI i raport PDF. Działa z adapterem ELM327 Bluetooth.",
+  "url": "https://moj-startup.eu/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&utm_source=website&utm_medium=schema&utm_campaign=elm327-bluetooth",
+  "screenshot": [
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Co to jest ELM327 Bluetooth?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "ELM327 Bluetooth to adapter OBD2, który podłącza się do gniazda diagnostycznego auta. Adapter przekazuje dane ze sterownika pojazdu do telefonu, gdzie aplikacja może pokazać kody DTC i wybrane parametry live."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Gdzie znajduje się gniazdo OBD2?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Gniazdo OBD2 zwykle znajduje się pod deską rozdzielczą po stronie kierowcy, w okolicy kolumny kierownicy, skrzynki bezpieczników albo dolnej części konsoli."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Dlaczego ELM327 nie łączy się z autem?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Przyczyną może być słaby adapter, brak zapłonu, niepoprawne parowanie Bluetooth, zajęte połączenie przez inną aplikację, nieobsługiwany protokół albo problem z gniazdem OBD2."
-          }
-        }
-      ]
+      "@type": "ImageObject",
+      "url": "https://moj-startup.eu/assets/screen-home.webp",
+      "caption": "Ekran główny aplikacji Mój Mechanik z diagnozą AI, OBD2, VIN i raportem PDF",
+      "width": 400,
+      "height": 800
+    },
+    {
+      "@type": "ImageObject",
+      "url": "https://moj-startup.eu/assets/screen-obd2-live.webp",
+      "caption": "Skaner OBD2 Live – parametry silnika w czasie rzeczywistym",
+      "width": 400,
+      "height": 800
+    },
+    {
+      "@type": "ImageObject",
+      "url": "https://moj-startup.eu/assets/screen-vin-pro.webp",
+      "caption": "Dekoder VIN PRO i raport historii pojazdu w formacie PDF",
+      "width": 400,
+      "height": 800
+    },
+    {
+      "@type": "ImageObject",
+      "url": "https://moj-startup.eu/assets/screen-ai-report.webp",
+      "caption": "Raport diagnostyczny AI – gotowy do przekazania mechanikowi",
+      "width": 400,
+      "height": 800
     }
-    </script>
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "PLN"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ELM327 Bluetooth: Jak Podłączyć Skaner OBD2 do Telefonu? [Krok po Kroku]",
+  "description": "Pełny poradnik adaptera ELM327 Bluetooth: podłączenie do auta, parowanie z telefonem Android, rozwiązywanie problemów z połączeniem i wybór najlepszego skanera OBD2.",
+  "url": "https://moj-startup.eu/elm327-bluetooth/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://moj-startup.eu/assets/screen-obd2-live.webp",
+    "width": 800,
+    "height": 400
+  },
+  "author": {
+    "@type": "Person",
+    "name": "mgr inż. Krzysztof Kowalski",
+    "jobTitle": "Diagnosta samochodowy"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mój Mechanik",
+    "url": "https://moj-startup.eu/"
+  },
+  "datePublished": "2026-06-28",
+  "dateModified": "2026-06-28",
+  "inLanguage": "pl-PL"
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Mój Mechanik",
+      "item": "https://moj-startup.eu/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ELM327 Bluetooth",
+      "item": "https://moj-startup.eu/elm327-bluetooth/"
+    }
+  ]
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Co to jest ELM327 Bluetooth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ELM327 Bluetooth to adapter OBD2, który podłącza się do gniazda diagnostycznego auta i przekazuje dane ze sterownika pojazdu do telefonu."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gdzie znajduje się gniazdo OBD2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gniazdo OBD2 zwykle znajduje się pod deską rozdzielczą po stronie kierowcy, w okolicy kolumny kierownicy lub skrzynki bezpieczników."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dlaczego ELM327 nie łączy się z autem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Przyczyną może być słaby adapter, brak zapłonu, niepoprawne parowanie Bluetooth lub nieobsługiwany protokół komunikacyjny."
+      }
+    }
+  ]
+}
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph -->
+    <!-- Twitter / X Cards -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = { theme: { extend: { colors: { darkBg: '#0f172a', panelBg: '#1e293b', brandRed: '#ef4444', brandRedHover: '#dc2626' }}}}

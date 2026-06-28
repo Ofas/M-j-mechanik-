@@ -1,6 +1,154 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poradnik Kierowcy: Check Engine, OBD2, VIN i Diagnostyka [Mój Mechanik]</title>
+    <meta name="description" content="Praktyczne poradniki motoryzacyjne: co zrobić gdy świeci Check Engine, jak sprawdzić VIN przed zakupem, jak podłączyć OBD2 i zrozumieć błędy silnika bez warsztatu.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#020617">
+    <link rel="canonical" href="https://moj-startup.eu/poradnik/">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Poradnik Kierowcy: Check Engine, OBD2, VIN i Diagnostyka [Mój Mechanik]">
+    <meta property="og:description" content="Praktyczne poradniki motoryzacyjne: co zrobić gdy świeci Check Engine, jak sprawdzić VIN przed zakupem, jak podłączyć OBD2 i zrozumieć błędy silnika bez warsztatu.">
+    <meta property="og:url" content="https://moj-startup.eu/poradnik/">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:site_name" content="Mój Mechanik">
+    <meta property="og:image" content="https://moj-startup.eu/assets/screen-home.webp">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <meta property="og:image:alt" content="Poradnik Kierowcy: Check Engine, OBD2, VIN i Diagnostyka [Mój Mechanik]">
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Poradnik Kierowcy – OBD2, Check Engine i VIN">
+    <meta name="twitter:description" content="Poradniki motoryzacyjne dla kierowców: diagnostyka OBD2, kody DTC, Check Engine i weryfikacja VIN. Sprawdź auto bez warsztatu.">
+    <meta name="twitter:image" content="https://moj-startup.eu/assets/screen-home.webp">
+    <meta name="twitter:image:alt" content="Poradnik Kierowcy: Check Engine, OBD2, VIN i Diagnostyka [Mój Mechanik]">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Mój Mechanik",
+  "alternateName": "Mój Mechanik AI",
+  "operatingSystem": "Android 8.0+",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "AutomotiveDiagnostics",
+  "description": "Polska aplikacja diagnostyczna dla kierowców: skaner OBD2, odczyt błędów DTC, dekoder VIN, diagnoza AI i raport PDF. Działa z adapterem ELM327 Bluetooth.",
+  "url": "https://moj-startup.eu/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.lukasz.mojmechanik&hl=pl&utm_source=website&utm_medium=schema&utm_campaign=poradnik",
+  "screenshot": [
+    {
+      "@type": "ImageObject",
+      "url": "https://moj-startup.eu/assets/screen-home.webp",
+      "caption": "Ekran główny aplikacji Mój Mechanik z diagnozą AI, OBD2, VIN i raportem PDF",
+      "width": 400,
+      "height": 800
+    },
+    {
+      "@type": "ImageObject",
+      "url": "https://moj-startup.eu/assets/screen-obd2-live.webp",
+      "caption": "Skaner OBD2 Live – parametry silnika w czasie rzeczywistym",
+      "width": 400,
+      "height": 800
+    },
+    {
+      "@type": "ImageObject",
+      "url": "https://moj-startup.eu/assets/screen-vin-pro.webp",
+      "caption": "Dekoder VIN PRO i raport historii pojazdu w formacie PDF",
+      "width": 400,
+      "height": 800
+    },
+    {
+      "@type": "ImageObject",
+      "url": "https://moj-startup.eu/assets/screen-ai-report.webp",
+      "caption": "Raport diagnostyczny AI – gotowy do przekazania mechanikowi",
+      "width": 400,
+      "height": 800
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "PLN"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "url": "https://moj-startup.eu/poradnik/auto-szarpie/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "url": "https://moj-startup.eu/poradnik/auto-nie-ma-mocy/"
+    }
+  ]
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Mój Mechanik",
+      "item": "https://moj-startup.eu/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Poradnik",
+      "item": "https://moj-startup.eu/poradnik/"
+    }
+  ]
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Jak odczytać kod błędu OBD2 bez warsztatu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wystarczy adapter ELM327 Bluetooth i aplikacja Mój Mechanik. Podłącz adapter do gniazda OBD2 w aucie i uruchom aplikację – kody pojawią się automatycznie."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Co zrobić gdy samochód nie ma mocy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sprawdź kody DTC przez OBD2. Najczęstszą przyczyną są: zapchany DPF, uszkodzona turbina, zanieczyszczony przepływomierz lub tryb awaryjny sterownika."
+      }
+    }
+  ]
+}
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph -->
+    <!-- Twitter / X Cards -->
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-22SZ9QS9HR"></script>
     <script>
@@ -13,10 +161,6 @@
     </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Poradnik kierowcy: Check Engine, OBD2 i VIN | Mój Mechanik</title>
-  <meta name="description" content="Praktyczny poradnik kierowcy: Check Engine, spadek mocy, szarpanie auta i sprawdzenie VIN przed zakupem. Wstępna pomoc diagnostyczna po polsku.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://moj-startup.eu/poradnik/">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
