@@ -1,1 +1,10 @@
 screny ze sklepu/
+
+# Internal SEO reports
+*.md
+!README.md
+
+# Python scripts (build tools, not for deployment)
+screny ze sklepu/
+scripts/__pycache__/
+*.pyc
